@@ -24,10 +24,9 @@ def get_data(yaml_file_name):
 base_data = get_data("base_data.yml")
 api_data = get_data("api_test_data.yml")
 scenario_data = get_data("scenario_test_data.yml")
-# api_data1 = get_data1('test_login_data.yml')
 
-def get_base_data(sql):
-    # sql = base_data["init_sql"]["select_user_order"]
+
+def get_basedata_url(sql):
     for sq in range(1, str(sql).count('${') + 1):
         if '${' in sql and '}' in sql:
             startIndex = str(sql).find('${')
@@ -69,13 +68,14 @@ def login_fixture():
     step_login(username, password)
     yield loginInfo.json()
 
+
 @pytest.fixture(scope="function")
 def select_user_order():
     """通过订单编号查询是否创建成功"""
 
     yield
     sql = base_data["init_sql"]["select_user_order"]
-    select_sql = get_base_data(sql)
+    select_sql = get_basedata_url(sql)
     user_distributor_id = db.select_db(select_sql)
     for dis in user_distributor_id:
         assert dis['user_distributor_id'] == ReadFileData().read_extract_yaml("distributor_id")
