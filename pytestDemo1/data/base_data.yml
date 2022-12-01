@@ -1,0 +1,11 @@
+init_admin_user:
+  username: "90100010"
+  password: "111111a"
+
+init_sql:
+  insert_delete_user:
+    - "INSERT INTO user(DistributorID, Mobile, DistributorCountry, UserType, CountryCode) VALUES('90100010', '9020002323', 'RU', '2', 'RU')"
+    - "DELETE FROM user WHERE DistributorID = '90100010'"
+  delete_register_user: "DELETE FROM user WHERE DistributorID = '90100010'"
+  update_user_telephone: "UPDATE user SET Mobile = '13500010004' WHERE id = 4"
+  select_user_order: "select user_distributor_id from trd_order where order_no='${goodsorderid}'"

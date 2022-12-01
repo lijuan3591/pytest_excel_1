@@ -1,0 +1,18 @@
+INFO     log:test_03_login.py:31 *************** 开始执行用例 ***************
+INFO     log:rest_client.py:119 接口请求地址 ==>> https://dev2-hq-kong.tiens.com/idserverhq/public/auth/login
+INFO     log:rest_client.py:120 接口请求方式 ==>> POST
+INFO     log:rest_client.py:122 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "select_nation_id": "RU"
+}
+INFO     log:rest_client.py:123 接口请求 params 参数 ==>> null
+INFO     log:rest_client.py:124 接口请求体 data 参数 ==>> {
+    "username": "1532341",
+    "password": "111111a",
+    "login_type": 1
+}
+INFO     log:rest_client.py:125 接口请求体 json 参数 ==>> null
+INFO     log:rest_client.py:126 接口上传附件 files 参数 ==>> None
+INFO     log:rest_client.py:127 接口 cookies 参数 ==>> null
+INFO     log:user.py:108 登录用户 ==>> 返回结果 ==>> {"code":50000,"msg":"JSON parse error: Unrecognized token 'username': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false'); nested exception is com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'username': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')\n at [Source: (PushbackInputStream); line: 1, column: 10]","data":""}
+INFO     log:test_03_login.py:12 步骤1 ==>> 登录用户：1532341

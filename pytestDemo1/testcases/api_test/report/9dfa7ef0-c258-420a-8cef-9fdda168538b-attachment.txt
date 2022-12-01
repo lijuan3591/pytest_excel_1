@@ -1,0 +1,25 @@
+INFO     log:test_03_login.py:32 *************** 开始执行用例 ***************
+INFO     log:rest_client.py:124 接口请求地址 ==>> https://dev2-hq-kong.tiens.com/idserverhq/public/auth/login
+INFO     log:rest_client.py:125 接口请求方式 ==>> POST
+INFO     log:rest_client.py:127 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "select_nation_id": "RU"
+}
+INFO     log:rest_client.py:128 接口请求 params 参数 ==>> null
+INFO     log:rest_client.py:129 接口请求体 data 参数 ==>> null
+INFO     log:rest_client.py:130 接口请求体 json 参数 ==>> {
+    "username": "1532341",
+    "password": "111111a",
+    "login_type": 1
+}
+INFO     log:rest_client.py:131 接口上传附件 files 参数 ==>> None
+INFO     log:rest_client.py:132 接口 cookies 参数 ==>> null
+INFO     log:user.py:102 登录用户 ==>> 返回结果 ==>> {"code":10000,"msg":"","data":{"token":"39Koa8DEAAPXMLy9nWWgeWFHkD4=","modify_password_type":2,"is_new":false,"user_info":{"user_ds_info":{"cust_type":0,"is_for_register":1,"real_cust_type":0,"is_frt_kit":true,"is_frt_sale":true,"xj":0,"lj_tzpv":0.0000,"lj_tzbv":0.0000,"lj_bv":0,"lj_pv":0,"rx_xj":0,"fz_xj":0,"lecturer_level":0},"user_profile_info":{"shop_id":"RU998000","num_tax":null,"payment_password":"d41d8cd98f00b204e9800998ecf8427e","rolecode":null,"cause_type":"1,2","whatsapp":null,"facebook":null,"instagram":null,"tiktok":null,"num_id_audit":0,"assist_id_card":null,"num_id":null},"is_guest":false,"contact_mobile":null,"contact_email":null,"localSponsorId":"89153554","mobileAuthentication":true,"emailAuthentication":true,"isEmployee":false,"is_newcomer_coupon":null,"raceType":0,"zx":false,"user_id":"1992037803632427011","user_id_l":1992037803632427011,"distributor_id":"1532341","distributor_name":"pmncc ejggkq","sponsor_id":"89153554","sponsor_name":"NAGA SUGARA","shop_id":"RU988013","distributor_country":"RU","head_url":"https://dev-res.tiens.com/pocket/avatar/0.png","yx_accid":"4bb82fb2313b45f9bd2a2f6ffb25e321","yx_token":"9d41893c8969fd07187fe8b33e84a7a5","mobile":"00079264802494","nick_name":"bpr95496tw5u","invite_code":"","sex":0,"birth":"","email":"54364649@qq.com","user_type":2,"user_level":10,"country_code":"RU","language_id":null,"enable":1,"introduction":"","is_password":false,"active":true,"mobile_active":1,"attribute":"0","cur_period":"202211","cur_week":"20221101","register_status":true},"app_config":null}}
+INFO     log:test_03_login.py:14 步骤1 ==>> 登录用户：1532341
+INFO     log:test_03_login.py:38 result==>>结果是：{'code': 10000, 'msg': '', 'data': {'token': '39Koa8DEAAPXMLy9nWWgeWFHkD4=', 'modify_password_type': 2, 'is_new': False, 'user_info': {'user_ds_info': {'cust_type': 0, 'is_for_register': 1, 'real_cust_type': 0, 'is_frt_kit': True, 'is_frt_sale': True, 'xj': 0, 'lj_tzpv': 0.0, 'lj_tzbv': 0.0, 'lj_bv': 0, 'lj_pv': 0, 'rx_xj': 0, 'fz_xj': 0, 'lecturer_level': 0}, 'user_profile_info': {'shop_id': 'RU998000', 'num_tax': None, 'payment_password': 'd41d8cd98f00b204e9800998ecf8427e', 'rolecode': None, 'cause_type': '1,2', 'whatsapp': None, 'facebook': None, 'instagram': None, 'tiktok': None, 'num_id_audit': 0, 'assist_id_card': None, 'num_id': None}, 'is_guest': False, 'contact_mobile': None, 'contact_email': None, 'localSponsorId': '89153554', 'mobileAuthentication': True, 'emailAuthentication': True, 'isEmployee': False, 'is_newcomer_coupon': None, 'raceType': 0, 'zx': False, 'user_id': '1992037803632427011', 'user_id_l': 1992037803632427011, 'distributor_id': '1532341', 'distributor_name': 'pmncc ejggkq', 'sponsor_id': '89153554', 'sponsor_name': 'NAGA SUGARA', 'shop_id': 'RU988013', 'distributor_country': 'RU', 'head_url': 'https://dev-res.tiens.com/pocket/avatar/0.png', 'yx_accid': '4bb82fb2313b45f9bd2a2f6ffb25e321', 'yx_token': '9d41893c8969fd07187fe8b33e84a7a5', 'mobile': '00079264802494', 'nick_name': 'bpr95496tw5u', 'invite_code': '', 'sex': 0, 'birth': '', 'email': '54364649@qq.com', 'user_type': 2, 'user_level': 10, 'country_code': 'RU', 'language_id': None, 'enable': 1, 'introduction': '', 'is_password': False, 'active': True, 'mobile_active': 1, 'attribute': '0', 'cur_period': '202211', 'cur_week': '20221101', 'register_status': True}, 'app_config': None}}
+INFO     log:test_03_login.py:39 except_msg==>>结果是：token
+INFO     log:test_03_login.py:40 code ==>> 期望结果：10000， 实际结果：【 10000 】
+INFO     log:user.py:166 assert==>>结果是：断言成功
+INFO     log:user.py:171 提取字段key是：tiens_token，提取的value是：39Koa8DEAAPXMLy9nWWgeWFHkD4=
+INFO     log:user.py:171 提取字段key是：user_id，提取的value是：1992037803632427011
+INFO     log:test_03_login.py:45 *************** 结束执行用例 ***************

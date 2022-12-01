@@ -1,0 +1,30 @@
+INFO     log:test_03_login.py:162 *************** 开始执行用例 ***************
+INFO     log:rest_client.py:104 接口请求地址 ==>> https://dev2-ir-kong.tiens.com/cashier/api/pay/create_order
+INFO     log:rest_client.py:105 接口请求方式 ==>> POST
+INFO     log:rest_client.py:107 接口请求头 ==>> {
+    "tiens_token": "NSk333h54HDw9b4iAbnF8PxF8ks=",
+    "user_id": "1992037803632427011",
+    "shop_id": "RU998001",
+    "shoppingcartid": "-1",
+    "Content-Type": "application/json",
+    "select_nation_id": "RU",
+    "tenant_id": "589750480639467571",
+    "tiens_code": "bq5KyE9G6JRNwh-d4qWzlkKLQKhTJIGbZgOnCFEhCINL4hjoKuPo-FdHhrg1g9eriFbK9wS0BFwSVwmrBKHcU_nakdZyNcUHkisYVrKqe0Wm1ICuO2SA8FevZ3GRqL2-_emeGWqMZNZ5w2AdqNIqzRDPT9NofnpjLKCIp8LPfy4="
+}
+INFO     log:rest_client.py:108 接口请求 params 参数 ==>> null
+INFO     log:rest_client.py:109 接口请求体 data 参数 ==>> null
+INFO     log:rest_client.py:110 接口请求体 json 参数 ==>> {
+    "goodsorderid": "99812211300015",
+    "channel_code": "tiens-pay-testpay-b2c",
+    "sourcehost": "https://dev2-cashier-uih5.tiens.com"
+}
+INFO     log:rest_client.py:111 接口上传附件 files 参数 ==>> None
+INFO     log:rest_client.py:112 接口 cookies 参数 ==>> null
+INFO     log:user.py:206 登录用户 ==>> 返回结果 ==>> {"root":{"type":"redirect","url":"https://dev2-ir-pocket-pub.tiens.com/public/589750480639467571/testpayb2c/public/channel/return?orderid=99812211300015","html":"","status":"SUCCESS","msg":"短路支付","data":null,"payorderid":"99812211300015","auto_submit":false}}
+INFO     log:test_03_login.py:15 步骤1 ==>> 登录用户：/cashier/api/pay/create_order
+INFO     log:test_03_login.py:166 code ==>> 期望结果：10000， 实际结果：【 10000 】
+INFO     log:user.py:224 assert==>>结果是：断言成功
+INFO     log:user.py:238 extrct为空,不需要获取返回值
+INFO     log:test_03_login.py:168 *************** 结束执行用例 ***************
+INFO     log:conftest.py:81 订单创建成功，通过订单编号查到的distributor_id是：[{'user_distributor_id': '1532341'}]
+INFO     log:conftest.py:82 订单创建成功，登录的distributor_id是：1532341

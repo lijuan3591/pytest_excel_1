@@ -1,0 +1,29 @@
+INFO     log:test_03_login.py:57 *************** 开始执行用例 ***************
+INFO     log:rest_client.py:104 接口请求地址 ==>> https://dev2-ir-kong.tiens.com/order-aggr/api/shopping_cart/add
+INFO     log:rest_client.py:105 接口请求方式 ==>> POST
+INFO     log:rest_client.py:107 接口请求头 ==>> {
+    "tiens_token": "cz0vy_FPpBEi9qPVwJdYc5a0o14=",
+    "user_id": "1992037803632427011",
+    "shop_id": "RU998001",
+    "shoppingcartid": "-1",
+    "Content-Type": "application/json",
+    "select_nation_id": "RU"
+}
+INFO     log:rest_client.py:108 接口请求 params 参数 ==>> null
+INFO     log:rest_client.py:109 接口请求体 data 参数 ==>> null
+INFO     log:rest_client.py:110 接口请求体 json 参数 ==>> {
+    "is_point": "False",
+    "is_start_package": "False",
+    "order_type": "1",
+    "qty": "1",
+    "sku_id": "10860172",
+    "is_limit": "False"
+}
+INFO     log:rest_client.py:111 接口上传附件 files 参数 ==>> None
+INFO     log:rest_client.py:112 接口 cookies 参数 ==>> null
+INFO     log:user.py:128 登录用户 ==>> 返回结果 ==>> {"code":10000,"msg":"","data":{"num":2}}
+INFO     log:test_03_login.py:15 步骤1 ==>> 登录用户：10860172
+INFO     log:test_03_login.py:61 code ==>> 期望结果：10000， 实际结果：【 10000 】
+INFO     log:user.py:224 assert==>>结果是：断言成功
+INFO     log:user.py:238 extract为空,不需要获取返回值
+INFO     log:test_03_login.py:63 *************** 结束执行用例 ***************

@@ -1,0 +1,29 @@
+INFO     log:test_03_login.py:127 *************** 开始执行用例 ***************
+INFO     log:rest_client.py:104 接口请求地址 ==>> https://dev2-ir-kong.tiens.com/order-aggr/api/checkout/go_pay
+INFO     log:rest_client.py:105 接口请求方式 ==>> POST
+INFO     log:rest_client.py:107 接口请求头 ==>> {
+    "tiens_token": "2RG5aplLrRhm1Fz8S3eRlajgJ8E=",
+    "user_id": "1992037803632427011",
+    "shop_id": "RU998001",
+    "shoppingcartid": "-1",
+    "Content-Type": "application/json",
+    "select_nation_id": "RU",
+    "curr_code": "RUB"
+}
+INFO     log:rest_client.py:108 接口请求 params 参数 ==>> null
+INFO     log:rest_client.py:109 接口请求体 data 参数 ==>> null
+INFO     log:rest_client.py:110 接口请求体 json 参数 ==>> {
+    "checkout_id": "2032440732789489667",
+    "note": ""
+}
+INFO     log:rest_client.py:111 接口上传附件 files 参数 ==>> None
+INFO     log:rest_client.py:112 接口 cookies 参数 ==>> null
+INFO     log:user.py:165 登录用户 ==>> 返回结果 ==>> {"code":10000,"msg":"","data":{"url":"https://dev2-cashier-uih5.tiens.com/landing?tenant_id=589750480639467571&goodsorderid=99812211300005&language=&token=eCCdsmx2dPCvwuc7fowL_oQwtKfElVqrmSdQNi0wAM0tc5BQqoeclQoUJgVexM14GxX7nle1QG3vKx3HWdr_5Fa0USuybEcrWO35YJG7qZ7GGOfDVipIQiURoYgDlRMQt1L5pPvigkHCRNe6iDdNYBPLckN1JSgyuJn2Us5Lhs0=","orderId":"2032440870228443138","orderNo":"99812211300005","is_zero":false,"is_team":false,"team_id":"0","success":true,"payment_type":1}}
+INFO     log:test_03_login.py:15 步骤1 ==>> 登录用户：/order-aggr/api/checkout/go_pay
+INFO     log:test_03_login.py:131 code ==>> 期望结果：10000， 实际结果：【 10000 】
+INFO     log:user.py:203 assert==>>结果是：断言成功
+INFO     log:user.py:208 提取字段key是：goodsorderid，提取的value是：99812211300005
+INFO     log:user.py:208 提取字段key是：orderId，提取的value是：2032440870228443138
+INFO     log:user.py:208 提取字段key是：url，提取的value是：https://dev2-cashier-uih5.tiens.com/landing?tenant_id=589750480639467571&goodsorderid=99812211300005&language=&token=eCCdsmx2dPCvwuc7fowL_oQwtKfElVqrmSdQNi0wAM0tc5BQqoeclQoUJgVexM14GxX7nle1QG3vKx3HWdr_5Fa0USuybEcrWO35YJG7qZ7GGOfDVipIQiURoYgDlRMQt1L5pPvigkHCRNe6iDdNYBPLckN1JSgyuJn2Us5Lhs0=
+INFO     log:user.py:211 提取字段key--tenant_id是：url，提取的value是：
+INFO     log:test_03_login.py:133 *************** 结束执行用例 ***************

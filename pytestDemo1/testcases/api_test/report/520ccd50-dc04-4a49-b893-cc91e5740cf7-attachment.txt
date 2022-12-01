@@ -1,0 +1,26 @@
+INFO     log:test_03_login.py:143 *************** 开始执行用例 ***************
+INFO     log:rest_client.py:104 接口请求地址 ==>> https://dev2-ir-kong.tiens.com/cashier/api/pay_channel/select?goodsorderid=99812211300015&language=zh-cn
+INFO     log:rest_client.py:105 接口请求方式 ==>> GET
+INFO     log:rest_client.py:107 接口请求头 ==>> {
+    "tiens_token": "NSk333h54HDw9b4iAbnF8PxF8ks=",
+    "user_id": "1992037803632427011",
+    "shop_id": "RU998001",
+    "shoppingcartid": "-1",
+    "Content-Type": "application/json",
+    "select_nation_id": "RU",
+    "curr_code": "RUB",
+    "tenant_id": "589750480639467571",
+    "tiens_code": "bq5KyE9G6JRNwh-d4qWzlkKLQKhTJIGbZgOnCFEhCINL4hjoKuPo-FdHhrg1g9eriFbK9wS0BFwSVwmrBKHcU_nakdZyNcUHkisYVrKqe0Wm1ICuO2SA8FevZ3GRqL2-_emeGWqMZNZ5w2AdqNIqzRDPT9NofnpjLKCIp8LPfy4=",
+    "Referer": "https://dev2-cashier-uih5.tiens.com/"
+}
+INFO     log:rest_client.py:108 接口请求 params 参数 ==>> null
+INFO     log:rest_client.py:109 接口请求体 data 参数 ==>> null
+INFO     log:rest_client.py:110 接口请求体 json 参数 ==>> null
+INFO     log:rest_client.py:111 接口上传附件 files 参数 ==>> None
+INFO     log:rest_client.py:112 接口 cookies 参数 ==>> null
+INFO     log:user.py:192 登录用户 ==>> 返回结果 ==>> {"root":{"payorder":{"amount":"2060,00₽","mach_order_no":"99812211300015","shipping_info":"Россия,Алтайский край,Барнаул","billing_info":"Россия,Алтайский край,Барнаул","product_name":"SP0602445的本地名称","order_timeout":1836,"order_timeout_hour":"0.5","userid":"1992037803632427011"},"channels":[{"channel_code":"tiens-pay-testpay-b2c","channel_name":"TestPay","channel_image_url":"https://sg-cdn-res.tiens.com/pocket/payment/tiens-pay-testpay-b2c.png","channel_type":"Form","channel_info":[]},{"channel_code":"tiens-pay-placetopay-ec","channel_name":"placetopay","channel_image_url":"https://static.placetopay.com/placetopay-logo.svg","channel_type":"GetChannelInfo","channel_info":[{"fieldname":"idnumber","fieldtype":"input","regular":"^[0-9]{10}$","resourcename":"tiens_pay_placetopay_ec_idnumber","help_resourcename":"tiens_pay_placetopay_ec_idnumber_help","dispalyorder":1,"required":true,"selectItem":null,"extraProperty":null,"default_value":null}]},{"channel_code":"tiens-pay-citypay-ban","channel_name":"CityPayBan","channel_image_url":"https://test-i.tiens.com/pocket-dc1/i/album/ID/202101/1033523922051792896.png?template=2&shape=2&w=188&h=60&q=80&format=png","channel_type":"Form","channel_info":[]},{"channel_code":"tiens-pay-payssion-ru","channel_name":"payssion支付渠道","channel_image_url":"https://test-i.tiens.com/pocket-dc1/i/album/RU/202206/1803873534041554945.jpg?template=2&shape=2&w=188&h=60&q=80&format=jpg","channel_type":"Url","channel_info":[]}]}}
+INFO     log:test_03_login.py:15 步骤1 ==>> 登录用户：/cashier/api/pay_channel/select?goodsorderid=${goodsorderid}&language=zh-cn
+INFO     log:test_03_login.py:147 code ==>> 期望结果：10000， 实际结果：【 10000 】
+INFO     log:user.py:224 assert==>>结果是：断言成功
+INFO     log:user.py:238 extrct为空,不需要获取返回值
+INFO     log:test_03_login.py:149 *************** 结束执行用例 ***************
