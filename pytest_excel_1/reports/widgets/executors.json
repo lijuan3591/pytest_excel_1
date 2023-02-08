@@ -1,0 +1,10 @@
+[ {
+  "name" : "Jenkins",
+  "type" : "jenkins",
+  "url" : "http://localhost:8888/",
+  "buildOrder" : 1,
+  "buildName" : "python_pytest_excel #1",
+  "buildUrl" : "http://localhost:8888/job/python_pytest_excel/1/",
+  "reportName" : "AllureReport",
+  "reportUrl" : "http://localhost:8888/job/python_pytest_excel/1/allure"
+} ]

@@ -1,0 +1,14 @@
+INFO     log:user_operation.py:48 data_dict的值是{'url': 'https://dev2-ir-kong.tiens.com/order-aggr/api/checkout/go_pay', 'headers': {'tiens_token': 'Wsqg_DBf9_ZpUfzbRI7Kg4SGlV8=', 'user_id': '1978770718374559746', 'shop_id': 'RU998001', 'shoppingcartid': '-1', 'Content-Type': 'application/json', 'select_nation_id': 'RU', 'curr_code': 'RUB'}, 'params': None, 'json': {'checkout_id': '2122945400342298624', 'note': ''}}
+INFO     log:user_operation.py:14 步骤1 ==>>返回结果：{"code":10000,"msg":"","data":{"url":"https://dev2-cashier-uih5.tiens.com/landing?tenant_id=589750480639467571&goodsorderid=99812301300022&language=&token=csbICeXx_4XsXWdRqZ6jtW8SCHnsLhB2B7PbUk7qhZnBrEjSSvMuaNlJxjy2VYy2yvvR_jQL5I-wiWWF1rOKS8bROn4ulaMAGz319X6yc1zEymD8udhpRQkFefMTH0iL0D3ru8raa7YWQQKIMp0SyLUynRICmD8fqtNgV_BrV3o=","orderId":"2122945537781252097","orderNo":"99812301300022","is_zero":false,"is_team":false,"team_id":"0","success":true,"payment_type":1}}
+INFO     log:user_operation.py:52 返回结果是{"code":10000,"msg":"","data":{"url":"https://dev2-cashier-uih5.tiens.com/landing?tenant_id=589750480639467571&goodsorderid=99812301300022&language=&token=csbICeXx_4XsXWdRqZ6jtW8SCHnsLhB2B7PbUk7qhZnBrEjSSvMuaNlJxjy2VYy2yvvR_jQL5I-wiWWF1rOKS8bROn4ulaMAGz319X6yc1zEymD8udhpRQkFefMTH0iL0D3ru8raa7YWQQKIMp0SyLUynRICmD8fqtNgV_BrV3o=","orderId":"2122945537781252097","orderNo":"99812301300022","is_zero":false,"is_team":false,"team_id":"0","success":true,"payment_type":1}}
+INFO     log:read_data.py:123 tmp[0]的值是10000
+INFO     log:user_operation.py:78 rel_result的值10000
+INFO     log:user_operation.py:81 测试用例执行成功
+INFO     log:read_data.py:123 tmp[0]的值是99812301300022
+INFO     log:user_operation.py:66 提取字段key是：goodsorderid，提取的value是：99812301300022
+INFO     log:read_data.py:123 tmp[0]的值是2122945537781252097
+INFO     log:user_operation.py:66 提取字段key是：orderId，提取的value是：2122945537781252097
+INFO     log:read_data.py:123 tmp[0]的值是https://dev2-cashier-uih5.tiens.com/landing?tenant_id=589750480639467571&goodsorderid=99812301300022&language=&token=csbICeXx_4XsXWdRqZ6jtW8SCHnsLhB2B7PbUk7qhZnBrEjSSvMuaNlJxjy2VYy2yvvR_jQL5I-wiWWF1rOKS8bROn4ulaMAGz319X6yc1zEymD8udhpRQkFefMTH0iL0D3ru8raa7YWQQKIMp0SyLUynRICmD8fqtNgV_BrV3o=
+INFO     log:user_operation.py:66 提取字段key是：url，提取的value是：https://dev2-cashier-uih5.tiens.com/landing?tenant_id=589750480639467571&goodsorderid=99812301300022&language=&token=csbICeXx_4XsXWdRqZ6jtW8SCHnsLhB2B7PbUk7qhZnBrEjSSvMuaNlJxjy2VYy2yvvR_jQL5I-wiWWF1rOKS8bROn4ulaMAGz319X6yc1zEymD8udhpRQkFefMTH0iL0D3ru8raa7YWQQKIMp0SyLUynRICmD8fqtNgV_BrV3o=
+INFO     log:user_operation.py:69 提取字段key--tenant_id是：url，提取的value是：589750480639467571
+INFO     log:user_operation.py:71 提取字段key--tiens_code：url，提取的value是：csbICeXx_4XsXWdRqZ6jtW8SCHnsLhB2B7PbUk7qhZnBrEjSSvMuaNlJxjy2VYy2yvvR_jQL5I-wiWWF1rOKS8bROn4ulaMAGz319X6yc1zEymD8udhpRQkFefMTH0iL0D3ru8raa7YWQQKIMp0SyLUynRICmD8fqtNgV_BrV3o=
