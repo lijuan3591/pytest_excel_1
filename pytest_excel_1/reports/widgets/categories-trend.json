@@ -1,4 +1,16 @@
 [ {
+  "buildOrder" : 3,
+  "reportUrl" : "http://localhost:8888/job/python_pytest_excel/3/allure",
+  "reportName" : "AllureReport",
+  "data" : { }
+}, {
+  "buildOrder" : 2,
+  "reportUrl" : "http://localhost:8888/job/python_pytest_excel/2/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "Test defects" : 6
+  }
+}, {
   "buildOrder" : 1,
   "reportUrl" : "http://localhost:8888/job/python_pytest_excel/1/allure",
   "reportName" : "AllureReport",
@@ -86,16 +98,6 @@
 }, {
   "buildOrder" : 45,
   "reportUrl" : "http://localhost:8888/job/python_pytest/45/allure",
-  "reportName" : "AllureReport",
-  "data" : { }
-}, {
-  "buildOrder" : 44,
-  "reportUrl" : "http://localhost:8888/job/python_pytest/44/allure",
-  "reportName" : "AllureReport",
-  "data" : { }
-}, {
-  "buildOrder" : 43,
-  "reportUrl" : "http://localhost:8888/job/python_pytest/43/allure",
   "reportName" : "AllureReport",
   "data" : { }
 } ]

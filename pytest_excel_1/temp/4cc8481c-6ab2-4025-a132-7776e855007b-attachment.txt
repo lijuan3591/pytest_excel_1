@@ -1,0 +1,10 @@
+INFO     log:user_operation.py:20 *************** 开始执行用例 ***************
+INFO     log:user_operation.py:53 data_dict的值是{'url': 'https://dev2-ir-kong.tiens.com/order-aggr/api/checkout', 'headers': {'tiens_token': 'qzH3IE819_2A2DjL5JhyjE7PN8E=', 'user_id': '1978770718374559746', 'shop_id': 'RU998001', 'shoppingcartid': '-1', 'Content-Type': 'application/json', 'select_nation_id': 'RU'}, 'params': None, 'json': {'order_type': 1, 'pickup_type': 0, 'shopping_user_checktype': '1'}}
+INFO     log:user_operation.py:13 步骤1 ==>>返回结果：{"code":10000,"msg":"","data":{"checkout_id":"2139012546579120131"}}
+INFO     log:user_operation.py:58 返回结果是{"code":10000,"msg":"","data":{"checkout_id":"2139012546579120131"}}
+INFO     log:read_data.py:62 tmp[0]的值是10000
+INFO     log:user_operation.py:87 rel_result的值10000
+INFO     log:user_operation.py:90 测试用例执行成功
+INFO     log:read_data.py:62 tmp[0]的值是2139012546579120131
+INFO     log:user_operation.py:72 提取字段key是：checkout_id，提取的value是：2139012546579120131
+INFO     log:user_operation.py:114 *************** 结束执行用例 ***************

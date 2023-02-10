@@ -1,80 +1,370 @@
 [ {
-  "uid" : "59bb1b8b65be4424",
-  "name" : "test_shoppingcart_add",
+  "uid" : "4de59a8ae2857995",
+  "name" : "test_go_pay",
   "time" : {
-    "start" : 1675056457588,
-    "stop" : 1675056458330,
-    "duration" : 742
+    "start" : 1675991738643,
+    "stop" : 1675991744785,
+    "duration" : 6142
   },
   "status" : "passed",
   "severity" : "blocker"
 }, {
-  "uid" : "a20f3f5401bc596d",
+  "uid" : "8f1380dcf76c0251",
+  "name" : "test_go_pay",
+  "time" : {
+    "start" : 1675991771543,
+    "stop" : 1675991779136,
+    "duration" : 7593
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "3d9e8f3977e8abe6",
+  "name" : "test_get_checkoutid",
+  "time" : {
+    "start" : 1675991702305,
+    "stop" : 1675991703913,
+    "duration" : 1608
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "ef3b1cabba7639d1",
   "name" : "test_create_order",
   "time" : {
-    "start" : 1675056472231,
-    "stop" : 1675056472751,
-    "duration" : 520
+    "start" : 1675991699519,
+    "stop" : 1675991700882,
+    "duration" : 1363
   },
   "status" : "passed",
   "severity" : "blocker"
 }, {
-  "uid" : "a6c9eadf05a85750",
+  "uid" : "b0323967c7fac58",
+  "name" : "test_select_method_delivery",
+  "time" : {
+    "start" : 1675991731558,
+    "stop" : 1675991738636,
+    "duration" : 7078
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "82ed0f287b320430",
+  "name" : "test_checkout",
+  "time" : {
+    "start" : 1675991687810,
+    "stop" : 1675991691023,
+    "duration" : 3213
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "23e994e18f57bb45",
+  "name" : "test_checkout",
+  "time" : {
+    "start" : 1675991682133,
+    "stop" : 1675991683263,
+    "duration" : 1130
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "392c3acfadd0ceb8",
+  "name" : "test_go_pay",
+  "time" : {
+    "start" : 1675991712126,
+    "stop" : 1675991716446,
+    "duration" : 4320
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "afe21c33dc0f3acb",
+  "name" : "test_select_method_delivery",
+  "time" : {
+    "start" : 1675991691032,
+    "stop" : 1675991694518,
+    "duration" : 3486
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "cf6ca91d7d6e15ed",
+  "name" : "test_shoppingcart_add",
+  "time" : {
+    "start" : 1675991686123,
+    "stop" : 1675991686872,
+    "duration" : 749
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "884bfb3abb52b217",
+  "name" : "test_shoppingcart_add",
+  "time" : {
+    "start" : 1675991700890,
+    "stop" : 1675991702297,
+    "duration" : 1407
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "d6262ab8ed323a4d",
   "name" : "test_login_user",
   "time" : {
-    "start" : 1675056457072,
-    "stop" : 1675056457586,
-    "duration" : 514
+    "start" : 1675991680222,
+    "stop" : 1675991680638,
+    "duration" : 416
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "9afce36c07150c19",
-  "name" : "test_select_method_delivery",
-  "time" : {
-    "start" : 1675056462844,
-    "stop" : 1675056466317,
-    "duration" : 3473
-  },
-  "status" : "passed",
-  "severity" : "blocker"
-}, {
-  "uid" : "889a04f88d79688d",
+  "uid" : "49a906acc9e63316",
   "name" : "test_select_paychannel",
   "time" : {
-    "start" : 1675056472082,
-    "stop" : 1675056472229,
-    "duration" : 147
+    "start" : 1675991744790,
+    "stop" : 1675991748327,
+    "duration" : 3537
   },
   "status" : "passed",
   "severity" : "blocker"
 }, {
-  "uid" : "2a0b48847cf8469b",
-  "name" : "test_checkout",
+  "uid" : "d169f54d1e8e45aa",
+  "name" : "test_shoppingcart_add",
   "time" : {
-    "start" : 1675056459182,
-    "stop" : 1675056462841,
-    "duration" : 3659
+    "start" : 1675991721320,
+    "stop" : 1675991723793,
+    "duration" : 2473
   },
   "status" : "passed",
   "severity" : "blocker"
 }, {
-  "uid" : "6bede9645f80638e",
-  "name" : "test_go_pay",
+  "uid" : "c0212e292a4bd9d6",
+  "name" : "test_shoppingcart_add",
   "time" : {
-    "start" : 1675056466321,
-    "stop" : 1675056472078,
-    "duration" : 5757
+    "start" : 1675991680642,
+    "stop" : 1675991681158,
+    "duration" : 516
   },
   "status" : "passed",
   "severity" : "blocker"
 }, {
-  "uid" : "3c89ac625d485f4d",
+  "uid" : "bf3d3c574b2248c6",
+  "name" : "test_create_order",
+  "time" : {
+    "start" : 1675991685421,
+    "stop" : 1675991686116,
+    "duration" : 695
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "7ea7f56c58de9ace",
   "name" : "test_get_checkoutid",
   "time" : {
-    "start" : 1675056458332,
-    "stop" : 1675056459178,
-    "duration" : 846
+    "start" : 1675991686876,
+    "stop" : 1675991687802,
+    "duration" : 926
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "8fa6700e58e8acc6",
+  "name" : "test_get_shipping_id",
+  "time" : {
+    "start" : 1675991681163,
+    "stop" : 1675991681624,
+    "duration" : 461
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "161c4b5eb64e4530",
+  "name" : "test_create_order",
+  "time" : {
+    "start" : 1675991748335,
+    "stop" : 1675991752314,
+    "duration" : 3979
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "5111e7c9919a690b",
+  "name" : "test_shoppingcart_add",
+  "time" : {
+    "start" : 1675991752320,
+    "stop" : 1675991756323,
+    "duration" : 4003
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "a1da2595f635dbdb",
+  "name" : "test_go_pay",
+  "time" : {
+    "start" : 1675991683269,
+    "stop" : 1675991684842,
+    "duration" : 1573
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "547eeb00c0ecda70",
+  "name" : "test_checkout",
+  "time" : {
+    "start" : 1675991726381,
+    "stop" : 1675991731548,
+    "duration" : 5167
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "585ebb03651da287",
+  "name" : "test_get_checkoutid",
+  "time" : {
+    "start" : 1675991681630,
+    "stop" : 1675991682125,
+    "duration" : 495
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "d970eb8b977a8210",
+  "name" : "test_go_pay",
+  "time" : {
+    "start" : 1675991694524,
+    "stop" : 1675991698289,
+    "duration" : 3765
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "e39b197b5b245171",
+  "name" : "test_checkout",
+  "time" : {
+    "start" : 1675991703919,
+    "stop" : 1675991707974,
+    "duration" : 4055
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "dadd7c42cc575f33",
+  "name" : "test_checkout",
+  "time" : {
+    "start" : 1675991760354,
+    "stop" : 1675991766722,
+    "duration" : 6368
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "7b01c03b3b650f34",
+  "name" : "test_create_order",
+  "time" : {
+    "start" : 1675991718791,
+    "stop" : 1675991721313,
+    "duration" : 2522
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "76e4d13ab3fddb33",
+  "name" : "test_create_team",
+  "time" : {
+    "start" : 1675991766732,
+    "stop" : 1675991771536,
+    "duration" : 4804
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "597f5acb8f5035f5",
+  "name" : "test_teamorder_payment",
+  "time" : {
+    "start" : 1675991779144,
+    "stop" : 1675991783980,
+    "duration" : 4836
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "740dd5c43f84d466",
+  "name" : "test_select_paychannel",
+  "time" : {
+    "start" : 1675991783984,
+    "stop" : 1675991789079,
+    "duration" : 5095
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "5ec4bdedb152c8a4",
+  "name" : "test_create_order",
+  "time" : {
+    "start" : 1675991789086,
+    "stop" : 1675991794694,
+    "duration" : 5608
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "a1d1e2740f0262ec",
+  "name" : "test_select_paychannel",
+  "time" : {
+    "start" : 1675991716455,
+    "stop" : 1675991718783,
+    "duration" : 2328
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "6c969efb1d39af5a",
+  "name" : "test_select_paychannel",
+  "time" : {
+    "start" : 1675991698296,
+    "stop" : 1675991699509,
+    "duration" : 1213
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "baeec2a2bb128643",
+  "name" : "test_select_method_delivery",
+  "time" : {
+    "start" : 1675991707979,
+    "stop" : 1675991712121,
+    "duration" : 4142
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "9d9fdd5afdf80f2f",
+  "name" : "test_get_checkoutid",
+  "time" : {
+    "start" : 1675991756329,
+    "stop" : 1675991760346,
+    "duration" : 4017
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "b4f7246984d9cf76",
+  "name" : "test_get_checkoutid",
+  "time" : {
+    "start" : 1675991723798,
+    "stop" : 1675991726376,
+    "duration" : 2578
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "5e7d184182d55abb",
+  "name" : "test_select_paychannel",
+  "time" : {
+    "start" : 1675991684850,
+    "stop" : 1675991685412,
+    "duration" : 562
   },
   "status" : "passed",
   "severity" : "blocker"

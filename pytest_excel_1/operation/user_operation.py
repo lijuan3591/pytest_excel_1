@@ -18,7 +18,7 @@ def step_1(result):
 def user_order_delivery(method,base_url,url,headers,params,json,json_data,ext):
     try:
         logger.info("*************** 开始执行用例 ***************")
-        if '/{}' in url:
+        if 'checkout/v2/{}' in url:
             ext = ext.split(';')
             data_dict = {
                     'url': base_url + url.format(rd.read_extract_yaml(ext[0])),
@@ -27,6 +27,14 @@ def user_order_delivery(method,base_url,url,headers,params,json,json_data,ext):
                     json: eval(json_data)
                 }
         elif 'goodsorderid' in url:
+            ext = ext.split(';')
+            data_dict = {
+                'url': base_url + url.format(rd.read_extract_yaml(ext[0])),
+                'headers': eval(headers),
+                'params': eval(params),
+                json: eval(json_data)
+            }
+        elif 'payment/v2/{}' in url:
             ext = ext.split(';')
             data_dict = {
                 'url': base_url + url.format(rd.read_extract_yaml(ext[0])),

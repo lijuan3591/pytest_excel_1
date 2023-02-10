@@ -27,12 +27,10 @@ class TestUserOrderDelivery():
     def test_user_order_delivery(self,data):
         r = data[0] + 1
         rd.report_api(data[11],data[17],data[16],data[18],data[19])
-        res = user_order_delivery(data[3],data[1],data[2],data[5],data[4],data[7],data[6],data[14])
+        res = user_order_delivery(data[3],data[1],data[2],data[5],data[4],data[7],data[6],data[15])
         assert_validate(excel,sheet,r,res,data[8],data[9],data_file_path)
         get_extract_data(data[12], data[13], res, data[14])
         check_user_order(sheet,excel,data_file_path,r,data[20],data[21])
-
-
 
 
 
