@@ -8,10 +8,6 @@ from common.read_excel import re
 from common.public_untils import EXCEL_PATH
 from operation.user_operation import assert_validate, get_extract_data, user_order_delivery, check_user_order
 
-# BASE_PATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
-# data_file_path = os.path.join(BASE_PATH, "data", "vshare.xlsx")
-# print(BASE_PATH)
-#
 
 
 
