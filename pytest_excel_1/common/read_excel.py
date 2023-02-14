@@ -6,7 +6,6 @@ import openpyxl
 import allure
 
 from common.logger import logger
-from common.public_untils import EXCEL_PATH1, EXCEL_PATH
 
 
 class ReadExcel():
@@ -26,13 +25,15 @@ class ReadExcel():
             logger.info(e)
             raise
 
+
+
+
+
+
 re = ReadExcel()
 
 
 if __name__ =='__main__':
     re = ReadExcel()
-    a=re.read_excel(EXCEL_PATH)
-    print(a[1])
-    print(type(a))
-
-
+    a=re.read_excel()
+    print(a)

@@ -2,163 +2,653 @@
   "uid" : "b1a8273437954620fa374b796ffaacdd",
   "name" : "behaviors",
   "children" : [ {
-    "name" : "F01_用户管理",
+    "name" : "F01主流程--拓展订单",
     "children" : [ {
-      "name" : "F01S01_登录",
+      "name" : "F05S01_登录",
       "children" : [ {
         "name" : "test_login_user",
-        "uid" : "5872d35160e06f51",
-        "parentUid" : "14b2f620bde80cdf44e34cf39037e472",
+        "uid" : "d6262ab8ed323a4d",
+        "parentUid" : "dfdad4efcfe4f79ec0bde312198f24e3",
         "status" : "passed",
         "time" : {
-          "start" : 1676017599720,
-          "stop" : 1676017600087,
-          "duration" : 367
+          "start" : 1675991680222,
+          "stop" : 1675991680638,
+          "duration" : 416
         },
         "flaky" : false,
         "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ "(3, 'https://dev2-hq-kong.tiens.com', '/idserverhq/public/auth/login', 'post', 'None', '{\"Content-Type\": \"application/json\",\"select_nation_id\": \"RU\"}', '{\"password\":\"111111\",\"username\":\"1531602\",\"login_type\":\"1\"}', 'json', '$..code', 10000, '通过', 'test_login_user', 'tiens_token;user_id;distributor_id', '$..token;$..user_id;$..distributor_id', 'None', 'None', 'F01S01_登录', 'F01_用户管理', '正常用例登录', 'critical', None, None, None)" ]
+        "parameters" : [ "(1, 'https://dev2-hq-kong.tiens.com', '/idserverhq/public/auth/login', 'post', 'None', '{\"Content-Type\": \"application/json\",\"select_nation_id\": \"RU\"}', '{\"password\":\"111111\",\"username\":\"1532143\",\"login_type\":\"1\"}', 'json', '$..code', 10000, '通过', 'test_login_user', 'tiens_token;user_id;distributor_id', '$..token;$..user_id;$..distributor_id', None, None, 'F05S01_登录', 'F01主流程--拓展订单', '正常用例登录', 'critical', None, None, None)" ]
       } ],
-      "uid" : "14b2f620bde80cdf44e34cf39037e472"
+      "uid" : "dfdad4efcfe4f79ec0bde312198f24e3"
+    }, {
+      "name" : "F01S02_商品加入购物车",
+      "children" : [ {
+        "name" : "test_shoppingcart_add",
+        "uid" : "c0212e292a4bd9d6",
+        "parentUid" : "d40af961ae88b5873eebdc1975a1235b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991680642,
+          "stop" : 1675991681158,
+          "duration" : 516
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(2, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/shopping_cart/add', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", '{\"is_start_package\":False,\"order_type\":5,\"dis_id\":\"\",\"qty\":1,\"sku_id\":\"10267175\"}', 'json', '$..code', 10000, '通过', 'test_shoppingcart_add', None, None, None, None, 'F01S02_商品加入购物车', 'F01主流程--拓展订单', '正常用例加购', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "d40af961ae88b5873eebdc1975a1235b"
+    }, {
+      "name" : "F01S03_获取shipping_address_id",
+      "children" : [ {
+        "name" : "test_get_shipping_id",
+        "uid" : "8fa6700e58e8acc6",
+        "parentUid" : "596340dccdc46828cfe7da432e77f20b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991681163,
+          "stop" : 1675991681624,
+          "duration" : 461
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(3, 'https://dev2-ir-kong.tiens.com', '/user-aggr/public/v2/address/shop', 'get', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", 'None', 'params', '$..code', 10000, '通过', 'test_get_shipping_id', 'shipping_address_id4', '$..address[0][id]', None, None, 'F01S03_获取shipping_address_id', 'F01主流程--拓展订单', '正常用例加购', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "596340dccdc46828cfe7da432e77f20b"
+    }, {
+      "name" : "F01S04_获取checkoutID",
+      "children" : [ {
+        "name" : "test_get_checkoutid",
+        "uid" : "585ebb03651da287",
+        "parentUid" : "40266be71c374e5a030f5d52f4bb4cba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991681630,
+          "stop" : 1675991682125,
+          "duration" : 495
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(4, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", \"{'order_type':5,'shipping_address_id':rd.read_extract_yaml('shipping_address_id4'),'pickup_type':0,'shopping_user_checktype':'1'}\", 'json', '$..code', 10000, '通过', 'test_get_checkoutid', 'checkout_id4', '$..checkout_id', None, None, 'F01S04_获取checkoutID', 'F01主流程--拓展订单', '正常用例进购', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "40266be71c374e5a030f5d52f4bb4cba"
+    }, {
+      "name" : "F01S05_结算页",
+      "children" : [ {
+        "name" : "test_checkout",
+        "uid" : "23e994e18f57bb45",
+        "parentUid" : "1e0e3b7c33c7c4cd0a0d344efe17ecc5",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991682133,
+          "stop" : 1675991683263,
+          "duration" : 1130
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(5, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout/v2/{}', 'get', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", 'None', 'params', '$..code', 10000, '通过', 'test_checkout', None, None, None, 'checkout_id4', 'F01S05_结算页', 'F01主流程--拓展订单', '正常用例先调', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "1e0e3b7c33c7c4cd0a0d344efe17ecc5"
+    }, {
+      "name" : "F01S06_进入收银台",
+      "children" : [ {
+        "name" : "test_go_pay",
+        "uid" : "a1da2595f635dbdb",
+        "parentUid" : "a5c570df6a895c7a939de39ad7d9bc66",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991683269,
+          "stop" : 1675991684842,
+          "duration" : 1573
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(6, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout/go_pay', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','curr_code': 'RUB'}\", \"{'checkout_id':rd.read_extract_yaml('checkout_id4'),'note':''}\", 'json', '$..code', 10000, '通过', 'test_go_pay', 'goodsorderid4;orderId4;url4', '$..orderNo;$..orderId;$..url', 'tenant_id4;tiens_code4', None, 'F01S06_进入收银台', 'F01主流程--拓展订单', '正常用例进收银台', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "a5c570df6a895c7a939de39ad7d9bc66"
+    }, {
+      "name" : "F01S07_选择支付渠道",
+      "children" : [ {
+        "name" : "test_select_paychannel",
+        "uid" : "5e7d184182d55abb",
+        "parentUid" : "199dd482bffe7e0f0a9e28dced658a55",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991684850,
+          "stop" : 1675991685412,
+          "duration" : 562
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(7, 'https://dev2-ir-kong.tiens.com', '/cashier/api/pay_channel/select?goodsorderid={}&language=zh-cn', 'get', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','curr_code': 'RUB','tenant_id': rd.read_extract_yaml('tenant_id4'),'tiens_code': rd.read_extract_yaml('tiens_code4'),'Referer': 'https://dev2-cashier-uih5.tiens.com/'}\", 'None', 'params', '$..channels[0][channel_code]', 'tiens-pay-testpay-b2c', '通过', 'test_select_paychannel', None, None, None, 'goodsorderid4', 'F01S07_选择支付渠道', 'F01主流程--拓展订单', '正常用例先调', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "199dd482bffe7e0f0a9e28dced658a55"
+    }, {
+      "name" : "F01S08_支付订单",
+      "children" : [ {
+        "name" : "test_create_order",
+        "uid" : "bf3d3c574b2248c6",
+        "parentUid" : "560448e9c3e37c5157981f3ef2c98acb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991685421,
+          "stop" : 1675991686116,
+          "duration" : 695
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(8, 'https://dev2-ir-kong.tiens.com', '/cashier/api/pay/create_order', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','tenant_id': rd.read_extract_yaml('tenant_id4'),'tiens_code': rd.read_extract_yaml('tiens_code4')}\", \"{\\n\\t'goodsorderid': rd.read_extract_yaml('goodsorderid4'),\\n\\t'channel_code': 'tiens-pay-testpay-b2c',\\n\\t'sourcehost': 'https://dev2-cashier-uih5.tiens.com'\\n}\", 'json', '$..status', 'SUCCESS', '通过', 'test_create_order', None, None, None, None, 'F01S08_支付订单', 'F01主流程--拓展订单', '正常用例后调', 'blocker', 'select user_distributor_id from trd_order where order_no=\"{}\"', 'goodsorderid4', '数据库校验通过')" ]
+      } ],
+      "uid" : "560448e9c3e37c5157981f3ef2c98acb"
     } ],
-    "uid" : "05312b6d0329b2ba9b8eacb4679f8099"
+    "uid" : "7f7fb885e9aa6f29dfc21a08237f694b"
   }, {
-    "name" : "F02_商品",
+    "name" : "F02主流程--普通订单(选择快递发运)",
     "children" : [ {
-      "name" : "F02S01_商品列表",
+      "name" : "F02S01_商品加入购物车",
       "children" : [ {
-        "name" : "test_product_list",
-        "uid" : "f66b02c27e7169bc",
-        "parentUid" : "8d26eddf5da594377dd9e6db356f3cf8",
-        "status" : "broken",
-        "time" : {
-          "start" : 1676017600112,
-          "stop" : 1676017601039,
-          "duration" : 927
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ "(5, 'https://dev2-ru-h5.tiens.com', '/product/api/goods/list', 'post', 'None', '{\"Content-Type\": \"application/json\",\"select_nation_id\": \"RU\",\\'tiens_token\\':rd.read_extract_yaml(\\'tiens_token\\'),\\'user_id\\':rd.read_extract_yaml(\\'user_id\\')}', '{\\n    \"price_type\":\"price\",\\n    \"price_max\":\"\",\\n    \"category_id\":\"12747508\",\\n    \"sort_type\":\"desc\",\\n    \"is_new_product\":False,\\n    \"limit\":20,\\n    \"price_min\":\"\",\\n    \"page\":1,\\n    \"sort_key\":\"default\",\\n    \"brand_id\":\"\"\\n}', 'json', '$..code', 10000, None, 'test_product_list', None, None, None, None, 'F02S01_商品列表', 'F02_商品', None, None, None, None, None)" ]
-      } ],
-      "uid" : "8d26eddf5da594377dd9e6db356f3cf8"
-    }, {
-      "name" : "F02S03_商品D价格",
-      "children" : [ {
-        "name" : "test_product_D_price",
-        "uid" : "9ec324755f4f32c7",
-        "parentUid" : "3555a56ed44754853a2d61a383d4fae0",
+        "name" : "test_shoppingcart_add",
+        "uid" : "cf6ca91d7d6e15ed",
+        "parentUid" : "fa8e2ec4b35ccd5d703103d53b610d47",
         "status" : "passed",
         "time" : {
-          "start" : 1676017601116,
-          "stop" : 1676017601434,
-          "duration" : 318
+          "start" : 1675991686123,
+          "stop" : 1675991686872,
+          "duration" : 749
         },
         "flaky" : false,
         "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ "(7, 'https://dev2-ir-kong.tiens.com', '/product-aggr/public/api/v2/product/11176516', 'get', '{\"order_type\":1,\"is_integral\":0}', '{\"Content-Type\": \"application/json\",\"select_nation_id\": \"RU\",\\'tiens_token\\':rd.read_extract_yaml(\\'tiens_token\\'),\\'user_id\\':rd.read_extract_yaml(\\'user_id\\')}', 'None', 'params', '$..price', '1000,00p', '通过', 'test_product_D_price', None, None, None, None, 'F02S03_商品D价格', 'F02_商品', None, None, None, None, None)" ]
+        "parameters" : [ "(9, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/shopping_cart/add', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", '{\"is_point\":False,\"is_start_package\":False,\"order_type\":1,\"qty\":1,\"sku_id\":\"10976705\",\"is_limit\":False}', 'json', '$..code', 10000, '通过', 'test_shoppingcart_add', None, None, None, None, 'F02S01_商品加入购物车', 'F02主流程--普通订单(选择快递发运)', '正常用例加购', 'blocker', None, None, None)" ]
       } ],
-      "uid" : "3555a56ed44754853a2d61a383d4fae0"
+      "uid" : "fa8e2ec4b35ccd5d703103d53b610d47"
     }, {
-      "name" : "F02S04_商品C价格",
+      "name" : "F02S02_获取购物车生成的checkoutID",
       "children" : [ {
-        "name" : "test_product_C_price",
-        "uid" : "5c9d2ff4cac03220",
-        "parentUid" : "e3843e9e82e174d5db51c98c1ff20a1e",
+        "name" : "test_get_checkoutid",
+        "uid" : "7ea7f56c58de9ace",
+        "parentUid" : "4d19d3bda038f15e537e3be224ed9ecd",
         "status" : "passed",
         "time" : {
-          "start" : 1676017601449,
-          "stop" : 1676017601719,
-          "duration" : 270
+          "start" : 1675991686876,
+          "stop" : 1675991687802,
+          "duration" : 926
         },
         "flaky" : false,
         "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ "(8, 'https://dev2-ir-kong.tiens.com', '/product-aggr/public/api/v2/product/11176516', 'get', '{\"order_type\":1,\"is_integral\":0}', '{\"Content-Type\": \"application/json\",\"select_nation_id\": \"RU\",\\'tiens_token\\':rd.read_extract_yaml(\\'tiens_token\\'),\\'user_id\\':rd.read_extract_yaml(\\'user_id\\')}', 'None', 'params', '$..price', None, None, 'test_product_C_price', None, None, None, None, 'F02S04_商品C价格', 'F02_商品', None, None, None, None, None)" ]
+        "parameters" : [ "(10, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", '{\"order_type\":1,\"pickup_type\":0,\"shopping_user_checktype\":\"1\"}', 'json', '$..code', 10000, '通过', 'test_get_checkoutid', 'checkout_id', '$..checkout_id', None, None, 'F02S02_获取购物车生成的checkoutID', 'F02主流程--普通订单(选择快递发运)', '正常用例进购', 'blocker', None, None, None)" ]
       } ],
-      "uid" : "e3843e9e82e174d5db51c98c1ff20a1e"
+      "uid" : "4d19d3bda038f15e537e3be224ed9ecd"
+    }, {
+      "name" : "F02S03_结算页",
+      "children" : [ {
+        "name" : "test_checkout",
+        "uid" : "82ed0f287b320430",
+        "parentUid" : "ad37709eb2ff62ba5a9143080ad797fe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991687810,
+          "stop" : 1675991691023,
+          "duration" : 3213
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(11, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout/v2/{}', 'get', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", 'None', 'params', '$..code', 10000, '通过', 'test_checkout', 'shipping_id;shipping_addrdss_id', '$..shipping_channel[0][id];$..address_shipping[id]', None, 'checkout_id', 'F02S03_结算页', 'F02主流程--普通订单(选择快递发运)', '正常用例先调', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "ad37709eb2ff62ba5a9143080ad797fe"
+    }, {
+      "name" : "F02S04_选择快递发运",
+      "children" : [ {
+        "name" : "test_select_method_delivery",
+        "uid" : "afe21c33dc0f3acb",
+        "parentUid" : "f6e133ccffca717b3e7dee4a22ba4aee",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991691032,
+          "stop" : 1675991694518,
+          "duration" : 3486
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(12, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout/select_shipping_method', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", \"{\\n\\t'shipping_type': 1,\\n\\t'shipping_addrdss_id': rd.read_extract_yaml('shipping_addrdss_id'),\\n\\t'checkout_id': rd.read_extract_yaml('checkout_id'),\\n\\t'shipping_id': rd.read_extract_yaml('shipping_id')\\n}\", 'json', '$..code', 10000, '通过', 'test_select_method_delivery', None, None, None, None, 'F02S04_选择快递发运', 'F02主流程--普通订单(选择快递发运)', '正常用例进结算页', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "f6e133ccffca717b3e7dee4a22ba4aee"
+    }, {
+      "name" : "F02S05_进入收银台",
+      "children" : [ {
+        "name" : "test_go_pay",
+        "uid" : "d970eb8b977a8210",
+        "parentUid" : "95368a6abf0d5dd2018a99104927815d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991694524,
+          "stop" : 1675991698289,
+          "duration" : 3765
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(13, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout/go_pay', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','curr_code': 'RUB'}\", \"{'checkout_id':rd.read_extract_yaml('checkout_id'),'note':''}\", 'json', '$..code', 10000, '通过', 'test_go_pay', 'goodsorderid;orderId;url', '$..orderNo;$..orderId;$..url', 'tenant_id;tiens_code', None, 'F02S05_进入收银台', 'F02主流程--普通订单(选择快递发运)', '正常用例进收银台', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "95368a6abf0d5dd2018a99104927815d"
+    }, {
+      "name" : "F02S06_选择支付渠道",
+      "children" : [ {
+        "name" : "test_select_paychannel",
+        "uid" : "6c969efb1d39af5a",
+        "parentUid" : "e74e357e859dec2616e44c476e56366c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991698296,
+          "stop" : 1675991699509,
+          "duration" : 1213
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(14, 'https://dev2-ir-kong.tiens.com', '/cashier/api/pay_channel/select?goodsorderid={}&language=zh-cn', 'get', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','curr_code': 'RUB','tenant_id': rd.read_extract_yaml('tenant_id'),'tiens_code': rd.read_extract_yaml('tiens_code'),'Referer': 'https://dev2-cashier-uih5.tiens.com/'}\", 'None', 'params', '$..channels[0][channel_code]', 'tiens-pay-testpay-b2c', '通过', 'test_select_paychannel', None, None, None, 'goodsorderid', 'F02S06_选择支付渠道', 'F02主流程--普通订单(选择快递发运)', '正常用例先调', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "e74e357e859dec2616e44c476e56366c"
+    }, {
+      "name" : "F02S07_创建订单",
+      "children" : [ {
+        "name" : "test_create_order",
+        "uid" : "ef3b1cabba7639d1",
+        "parentUid" : "90ad38c95154122ea122c152210515ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991699519,
+          "stop" : 1675991700882,
+          "duration" : 1363
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(15, 'https://dev2-ir-kong.tiens.com', '/cashier/api/pay/create_order', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','tenant_id': rd.read_extract_yaml('tenant_id'),'tiens_code': rd.read_extract_yaml('tiens_code')}\", \"{\\n\\t'goodsorderid': rd.read_extract_yaml('goodsorderid'),\\n\\t'channel_code': 'tiens-pay-testpay-b2c',\\n\\t'sourcehost': 'https://dev2-cashier-uih5.tiens.com'\\n}\", 'json', '$..status', 'SUCCESS', '通过', 'test_create_order', None, None, None, None, 'F02S07_创建订单', 'F02主流程--普通订单(选择快递发运)', '正常用例后调', 'blocker', 'select user_distributor_id from trd_order where order_no=\"{}\"', 'goodsorderid', '数据库校验通过')" ]
+      } ],
+      "uid" : "90ad38c95154122ea122c152210515ba"
     } ],
-    "uid" : "b2752b1cc94faf4eee87235296b7019a"
+    "uid" : "04c4dc61951883b73f32dd219e6e694d"
   }, {
-    "name" : "F03_购物车",
+    "name" : "F03主流程--普通订单(分公司自提)",
     "children" : [ {
-      "name" : "F03S01_D会员加入商品到普通购物车",
+      "name" : "F03S01_商品加入购物车",
       "children" : [ {
-        "name" : "test_D_shoppingcart_add",
-        "uid" : "7ba31444e0176c6c",
-        "parentUid" : "e88f11b32047c6536340223dbf6cc7c3",
+        "name" : "test_shoppingcart_add",
+        "uid" : "884bfb3abb52b217",
+        "parentUid" : "b8d6c7f990cd780226c8fc82c64c0e09",
         "status" : "passed",
         "time" : {
-          "start" : 1676017601734,
-          "stop" : 1676017601972,
-          "duration" : 238
+          "start" : 1675991700890,
+          "stop" : 1675991702297,
+          "duration" : 1407
         },
         "flaky" : false,
         "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ "(9, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/shopping_cart/add', 'post', 'None', '{\"Content-Type\": \"application/json\",\"select_nation_id\": \"RU\",\\'tiens_token\\':rd.read_extract_yaml(\\'tiens_token\\'),\\'user_id\\':rd.read_extract_yaml(\\'user_id\\')}', '{\"is_point\":False,\"is_start_package\":False,\"order_type\":1,\"qty\":1,\"sku_id\":\"11176517\",\"is_limit\":False}', 'json', '$..code', 10000, None, 'test_D_shoppingcart_add', None, None, None, None, 'F03S01_D会员加入商品到普通购物车', 'F03_购物车', None, None, None, None, None)" ]
+        "parameters" : [ "(16, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/shopping_cart/add', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", '{\"is_point\":False,\"is_start_package\":False,\"order_type\":1,\"qty\":1,\"sku_id\":\"10860172\",\"is_limit\":False}', 'json', '$..code', 10000, '通过', 'test_shoppingcart_add', None, None, None, None, 'F03S01_商品加入购物车', 'F03主流程--普通订单(分公司自提)', '正常用例加购', 'blocker', None, None, None)" ]
       } ],
-      "uid" : "e88f11b32047c6536340223dbf6cc7c3"
+      "uid" : "b8d6c7f990cd780226c8fc82c64c0e09"
     }, {
-      "name" : "F03S02_C会员加入商品到普通购物车",
+      "name" : "F03S02_获取购物车生成的checkoutID",
       "children" : [ {
-        "name" : "test_C_shoppingcart_add",
-        "uid" : "ad880a357a9166a5",
-        "parentUid" : "77317f7db66b9c1ad55c571e382407fd",
+        "name" : "test_get_checkoutid",
+        "uid" : "3d9e8f3977e8abe6",
+        "parentUid" : "9f3b117b20d4624fbfab37ee2faffbf9",
         "status" : "passed",
         "time" : {
-          "start" : 1676017601985,
-          "stop" : 1676017602352,
-          "duration" : 367
+          "start" : 1675991702305,
+          "stop" : 1675991703913,
+          "duration" : 1608
         },
         "flaky" : false,
         "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ "(10, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/shopping_cart/add', 'post', 'None', '{\"Content-Type\": \"application/json\",\"select_nation_id\": \"RU\",\\'tiens_token\\':rd.read_extract_yaml(\\'tiens_token\\'),\\'user_id\\':rd.read_extract_yaml(\\'user_id\\')}', '{\"is_point\":False,\"is_start_package\":False,\"order_type\":1,\"qty\":1,\"sku_id\":\"11176517\",\"is_limit\":False}', 'json', '$..code', 10000, None, 'test_C_shoppingcart_add', None, None, None, None, 'F03S02_C会员加入商品到普通购物车', 'F03_购物车', None, None, None, None, None)" ]
+        "parameters" : [ "(17, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", '{\"order_type\":1,\"pickup_type\":0,\"shopping_user_checktype\":\"1\"}', 'json', '$..code', 10000, '通过', 'test_get_checkoutid', 'checkout_id1', '$..checkout_id', None, None, 'F03S02_获取购物车生成的checkoutID', 'F03主流程--普通订单(分公司自提)', '正常用例进购', 'blocker', None, None, None)" ]
       } ],
-      "uid" : "77317f7db66b9c1ad55c571e382407fd"
+      "uid" : "9f3b117b20d4624fbfab37ee2faffbf9"
     }, {
-      "name" : "F03S03_D会员加入商品到拓展购物车",
+      "name" : "F03S03_结算页",
       "children" : [ {
-        "name" : "test_D_expand_shoppingcart_add",
-        "uid" : "f4dddbfa56d93421",
-        "parentUid" : "f7184a90217fb44385b16455f632de20",
+        "name" : "test_checkout",
+        "uid" : "e39b197b5b245171",
+        "parentUid" : "49e3a675fe2fdf81903d26644eebb4b0",
         "status" : "passed",
         "time" : {
-          "start" : 1676017602381,
-          "stop" : 1676017602649,
-          "duration" : 268
+          "start" : 1675991703919,
+          "stop" : 1675991707974,
+          "duration" : 4055
         },
         "flaky" : false,
         "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ "(11, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/shopping_cart/add', 'post', 'None', '{\"Content-Type\": \"application/json\",\"select_nation_id\": \"RU\",\\'tiens_token\\':rd.read_extract_yaml(\\'tiens_token\\'),\\'user_id\\':rd.read_extract_yaml(\\'user_id\\')}', '{\"is_point\":False,\"is_start_package\":False,\"order_type\":5,\"qty\":1,\"sku_id\":\"11176517\",\"is_limit\":False}', 'json', '$..code', 10000, '失败', 'test_D_expand_shoppingcart_add', None, None, None, None, 'F03S03_D会员加入商品到拓展购物车', 'F03_购物车', None, None, None, None, None)" ]
+        "parameters" : [ "(18, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout/v2/{}', 'get', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", 'None', 'params', '$..code', 10000, '通过', 'test_checkout', 'shipping_id1;shipping_addrdss_id1', '$..shipping_channel[1][id];$..address_shipping[id]', None, 'checkout_id1', 'F03S03_结算页', 'F03主流程--普通订单(分公司自提)', '正常用例先调', 'blocker', None, None, None)" ]
       } ],
-      "uid" : "f7184a90217fb44385b16455f632de20"
+      "uid" : "49e3a675fe2fdf81903d26644eebb4b0"
+    }, {
+      "name" : "F03S04_选择分公司自提",
+      "children" : [ {
+        "name" : "test_select_method_delivery",
+        "uid" : "baeec2a2bb128643",
+        "parentUid" : "ddd0d04b8522a1dc58a673d540285667",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991707979,
+          "stop" : 1675991712121,
+          "duration" : 4142
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(19, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout/select_shipping_method', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", \"{\\n\\t'shipping_type': 2,\\n'org_id': 4,\\n\\t'checkout_id': rd.read_extract_yaml('checkout_id1'),\\n\\t'shipping_id': rd.read_extract_yaml('shipping_id1')\\n}\", 'json', '$..code', 10000, '通过', 'test_select_method_delivery', None, None, None, None, 'F03S04_选择分公司自提', 'F03主流程--普通订单(分公司自提)', '正常用例进结算页', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "ddd0d04b8522a1dc58a673d540285667"
+    }, {
+      "name" : "F03S05_进入收银台",
+      "children" : [ {
+        "name" : "test_go_pay",
+        "uid" : "392c3acfadd0ceb8",
+        "parentUid" : "8647043e52e9eb6f5fd1d4d6a1f6d35e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991712126,
+          "stop" : 1675991716446,
+          "duration" : 4320
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(20, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout/go_pay', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','curr_code': 'RUB'}\", \"{'checkout_id':rd.read_extract_yaml('checkout_id1'),'note':''}\", 'json', '$..code', 10000, '通过', 'test_go_pay', 'goodsorderid1;orderId1;url1', '$..orderNo;$..orderId;$..url', 'tenant_id1;tiens_code1', None, 'F03S05_进入收银台', 'F03主流程--普通订单(分公司自提)', '正常用例进收银台', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "8647043e52e9eb6f5fd1d4d6a1f6d35e"
+    }, {
+      "name" : "F03S06_选择支付渠道",
+      "children" : [ {
+        "name" : "test_select_paychannel",
+        "uid" : "a1d1e2740f0262ec",
+        "parentUid" : "5c249f290a29397931739293932a378a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991716455,
+          "stop" : 1675991718783,
+          "duration" : 2328
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(21, 'https://dev2-ir-kong.tiens.com', '/cashier/api/pay_channel/select?goodsorderid={}&language=zh-cn', 'get', 'None', \"{'Host':'dev2-ir-kong.tiens.com','Origin':'https://dev2-cashier-uih5.tiens.com','Connection':'keep-alive','tenant_id':rd.read_extract_yaml('tenant_id1'),'tiens_code':rd.read_extract_yaml('tiens_code1'),'language_id':'zh-cn','Accept':'application/json, text/plain, */*','User-Agent':'Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) VShareInfo/{\\\\'app_version\\\\':\\\\'5.7.6\\\\'}','Referer':'https://dev2-cashier-uih5.tiens.com/','Accept-Language':'zh-CN,zh-Hans;q=0.9','Accept-Encoding':'gzip, deflate, br'}\", 'None', 'params', '$..channels[0][channel_code]', 'tiens-pay-testpay-b2c', '通过', 'test_select_paychannel', None, None, None, 'goodsorderid1', 'F03S06_选择支付渠道', 'F03主流程--普通订单(分公司自提)', '正常用例先调', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "5c249f290a29397931739293932a378a"
+    }, {
+      "name" : "F03S07_创建订单",
+      "children" : [ {
+        "name" : "test_create_order",
+        "uid" : "7b01c03b3b650f34",
+        "parentUid" : "471259b60a21610cc46688554caad35d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991718791,
+          "stop" : 1675991721313,
+          "duration" : 2522
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(22, 'https://dev2-ir-kong.tiens.com', '/cashier/api/pay/create_order', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','tenant_id': rd.read_extract_yaml('tenant_id1'),'tiens_code': rd.read_extract_yaml('tiens_code1')}\", \"{\\n\\t'goodsorderid': rd.read_extract_yaml('goodsorderid1'),\\n\\t'channel_code': 'tiens-pay-testpay-b2c',\\n\\t'sourcehost': 'https://dev2-cashier-uih5.tiens.com'\\n}\", 'json', '$..status', 'SUCCESS', '通过', 'test_create_order', None, None, None, None, 'F03S07_创建订单', 'F03主流程--普通订单(分公司自提)', '正常用例后调', 'blocker', 'select user_distributor_id from trd_order where order_no=\"{}\"', 'goodsorderid1', '数据库校验通过')" ]
+      } ],
+      "uid" : "471259b60a21610cc46688554caad35d"
     } ],
-    "uid" : "8a54f62b865248e26a4130579f4e44b7"
+    "uid" : "03a066ca0d223888927f6410a7908dcb"
+  }, {
+    "name" : "F04主流程--普通订单(专卖店自提)",
+    "children" : [ {
+      "name" : "F04S01_商品加入购物车",
+      "children" : [ {
+        "name" : "test_shoppingcart_add",
+        "uid" : "d169f54d1e8e45aa",
+        "parentUid" : "d4cb015d374e865ef538edcd47d3a7cb",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991721320,
+          "stop" : 1675991723793,
+          "duration" : 2473
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(23, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/shopping_cart/add', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", '{\"is_point\":False,\"is_start_package\":False,\"order_type\":1,\"qty\":1,\"sku_id\":\"10976705\",\"is_limit\":False}', 'json', '$..code', 10000, '通过', 'test_shoppingcart_add', None, None, None, None, 'F04S01_商品加入购物车', 'F04主流程--普通订单(专卖店自提)', '正常用例加购', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "d4cb015d374e865ef538edcd47d3a7cb"
+    }, {
+      "name" : "F04S02_获取购物车生成的checkoutID",
+      "children" : [ {
+        "name" : "test_get_checkoutid",
+        "uid" : "b4f7246984d9cf76",
+        "parentUid" : "e4532147809dffaefee5b4851e8918e1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991723798,
+          "stop" : 1675991726376,
+          "duration" : 2578
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(24, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", '{\"order_type\":1,\"pickup_type\":0,\"shopping_user_checktype\":\"1\"}', 'json', '$..code', 10000, '通过', 'test_get_checkoutid', 'checkout_id2', '$..checkout_id', None, None, 'F04S02_获取购物车生成的checkoutID', 'F04主流程--普通订单(专卖店自提)', '正常用例进购', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "e4532147809dffaefee5b4851e8918e1"
+    }, {
+      "name" : "F04S03_结算页",
+      "children" : [ {
+        "name" : "test_checkout",
+        "uid" : "547eeb00c0ecda70",
+        "parentUid" : "79281480613bcbec431e190cc8589385",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991726381,
+          "stop" : 1675991731548,
+          "duration" : 5167
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(25, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout/v2/{}', 'get', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", 'None', 'params', '$..code', 10000, '通过', 'test_checkout', 'shipping_id2;shipping_addrdss_id2', '$..shipping_channel[1][id];$..address_shipping[id]', None, 'checkout_id2', 'F04S03_结算页', 'F04主流程--普通订单(专卖店自提)', '正常用例先调', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "79281480613bcbec431e190cc8589385"
+    }, {
+      "name" : "F04S04_选择专卖店自提",
+      "children" : [ {
+        "name" : "test_select_method_delivery",
+        "uid" : "b0323967c7fac58",
+        "parentUid" : "25e7c507b2a5f720adbeb66d4f15bffa",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991731558,
+          "stop" : 1675991738636,
+          "duration" : 7078
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(26, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout/select_shipping_method', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", \"{\\n\\t'shipping_type': 2,\\n'org_shop_id': 890,\\n\\t'checkout_id': rd.read_extract_yaml('checkout_id2'),\\n\\t'shipping_id': rd.read_extract_yaml('shipping_id2')\\n}\", 'json', '$..code', 10000, '通过', 'test_select_method_delivery', None, None, None, None, 'F04S04_选择专卖店自提', 'F04主流程--普通订单(专卖店自提)', '正常用例进结算页', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "25e7c507b2a5f720adbeb66d4f15bffa"
+    }, {
+      "name" : "F04S05_进入收银台",
+      "children" : [ {
+        "name" : "test_go_pay",
+        "uid" : "4de59a8ae2857995",
+        "parentUid" : "2cb1751b119c3ab4a5d0fe37803d6d62",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991738643,
+          "stop" : 1675991744785,
+          "duration" : 6142
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(27, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout/go_pay', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','curr_code': 'RUB'}\", \"{'checkout_id':rd.read_extract_yaml('checkout_id2'),'note':''}\", 'json', '$..code', 10000, '通过', 'test_go_pay', 'goodsorderid2;orderId2;url2', '$..orderNo;$..orderId;$..url', 'tenant_id2;tiens_code2', None, 'F04S05_进入收银台', 'F04主流程--普通订单(专卖店自提)', '正常用例进收银台', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "2cb1751b119c3ab4a5d0fe37803d6d62"
+    }, {
+      "name" : "F04S06_选择支付渠道",
+      "children" : [ {
+        "name" : "test_select_paychannel",
+        "uid" : "49a906acc9e63316",
+        "parentUid" : "7c1eefcd63c8b25b04d4b6a105f2054b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991744790,
+          "stop" : 1675991748327,
+          "duration" : 3537
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(28, 'https://dev2-ir-kong.tiens.com', '/cashier/api/pay_channel/select?goodsorderid={}&language=zh-cn', 'get', 'None', \"{'Host':'dev2-ir-kong.tiens.com','Origin':'https://dev2-cashier-uih5.tiens.com','Connection':'keep-alive','tenant_id':rd.read_extract_yaml('tenant_id2'),'tiens_code':rd.read_extract_yaml('tiens_code2'),'language_id':'zh-cn','Accept':'application/json, text/plain, */*','User-Agent':'Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) VShareInfo/{\\\\'app_version\\\\':\\\\'5.7.6\\\\'}','Referer':'https://dev2-cashier-uih5.tiens.com/'}\", 'None', 'params', \"$..channels[0]['channel_code']\", 'tiens-pay-testpay-b2c', '通过', 'test_select_paychannel', None, None, None, 'goodsorderid2', 'F04S06_选择支付渠道', 'F04主流程--普通订单(专卖店自提)', '正常用例先调', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "7c1eefcd63c8b25b04d4b6a105f2054b"
+    }, {
+      "name" : "F04S07_创建订单",
+      "children" : [ {
+        "name" : "test_create_order",
+        "uid" : "161c4b5eb64e4530",
+        "parentUid" : "4c9be94f7840ceb9777106ae13978d40",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991748335,
+          "stop" : 1675991752314,
+          "duration" : 3979
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(29, 'https://dev2-ir-kong.tiens.com', '/cashier/api/pay/create_order', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','tenant_id': rd.read_extract_yaml('tenant_id2'),'tiens_code': rd.read_extract_yaml('tiens_code2')}\", \"{\\n\\t'goodsorderid': rd.read_extract_yaml('goodsorderid2'),\\n\\t'channel_code': 'tiens-pay-testpay-b2c',\\n\\t'sourcehost': 'https://dev2-cashier-uih5.tiens.com'\\n}\", 'json', '$..status', 'SUCCESS', '通过', 'test_create_order', None, None, None, None, 'F04S07_创建订单', 'F04主流程--普通订单(专卖店自提)', '正常用例后调', 'blocker', 'select user_distributor_id from trd_order where order_no=\"{}\"', 'goodsorderid2', '数据库校验通过')" ]
+      } ],
+      "uid" : "4c9be94f7840ceb9777106ae13978d40"
+    } ],
+    "uid" : "027b05db6612fd0e44dc585097b25f0b"
+  }, {
+    "name" : "F05主流程--组队订单",
+    "children" : [ {
+      "name" : "F05S01_商品加入购物车",
+      "children" : [ {
+        "name" : "test_shoppingcart_add",
+        "uid" : "5111e7c9919a690b",
+        "parentUid" : "d3d7eca9cb5dfb9cb332ea89485cd219",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991752320,
+          "stop" : 1675991756323,
+          "duration" : 4003
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(30, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/shopping_cart/add', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", '{\"is_point\":False,\"is_start_package\":False,\"order_type\":1,\"qty\":1,\"sku_id\":\"10976705\",\"is_limit\":False}', 'json', '$..code', 10000, '通过', 'test_shoppingcart_add', None, None, None, None, 'F05S01_商品加入购物车', 'F05主流程--组队订单', '正常用例加购', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "d3d7eca9cb5dfb9cb332ea89485cd219"
+    }, {
+      "name" : "F05S02_获取购物车生成的checkoutID",
+      "children" : [ {
+        "name" : "test_get_checkoutid",
+        "uid" : "9d9fdd5afdf80f2f",
+        "parentUid" : "ffd551d8f3ace5677a1de017d3b4ddc7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991756329,
+          "stop" : 1675991760346,
+          "duration" : 4017
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(31, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", '{\"order_type\":1,\"pickup_type\":0,\"shopping_user_checktype\":\"1\"}', 'json', '$..code', 10000, '通过', 'test_get_checkoutid', 'checkout_id3', '$..checkout_id', None, None, 'F05S02_获取购物车生成的checkoutID', 'F05主流程--组队订单', '正常用例进购', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "ffd551d8f3ace5677a1de017d3b4ddc7"
+    }, {
+      "name" : "F05S03_结算页",
+      "children" : [ {
+        "name" : "test_checkout",
+        "uid" : "dadd7c42cc575f33",
+        "parentUid" : "69266a4769c90e2aa8c02f58917e1d87",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991760354,
+          "stop" : 1675991766722,
+          "duration" : 6368
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(32, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout/v2/{}', 'get', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", 'None', 'params', '$..code', 10000, '通过', 'test_checkout', None, None, None, 'checkout_id3', 'F05S03_结算页', 'F05主流程--组队订单', '正常用例先调', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "69266a4769c90e2aa8c02f58917e1d87"
+    }, {
+      "name" : "F05S04_创建组队订单",
+      "children" : [ {
+        "name" : "test_create_team",
+        "uid" : "76e4d13ab3fddb33",
+        "parentUid" : "1cbeedf522fd5940a26f9d2d712ba604",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991766732,
+          "stop" : 1675991771536,
+          "duration" : 4804
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(33, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout/create_team', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", \"{'is_create_new_team':True,'checkout_id':rd.read_extract_yaml('checkout_id3')}\", 'json', '$..code', 10000, '通过', 'test_create_team', None, None, None, None, 'F05S04_创建组队订单', 'F05主流程--组队订单', '正常用例先调', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "1cbeedf522fd5940a26f9d2d712ba604"
+    }, {
+      "name" : "F05S05_进入组队订单页",
+      "children" : [ {
+        "name" : "test_go_pay",
+        "uid" : "8f1380dcf76c0251",
+        "parentUid" : "47d39db8cc52f0f000631c3f519c70b6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991771543,
+          "stop" : 1675991779136,
+          "duration" : 7593
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(34, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout/go_pay', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','curr_code': 'RUB'}\", \"{'checkout_id':rd.read_extract_yaml('checkout_id3'),'note':''}\", 'json', '$..code', 10000, '通过', 'test_go_pay', 'team_id3', '$..team_id', None, None, 'F05S05_进入组队订单页', 'F05主流程--组队订单', '正常用例进收银台', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "47d39db8cc52f0f000631c3f519c70b6"
+    }, {
+      "name" : "F05S06_组队订单支付",
+      "children" : [ {
+        "name" : "test_teamorder_payment",
+        "uid" : "597f5acb8f5035f5",
+        "parentUid" : "b6ede68058f0202503a92612c6de2fd8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991779144,
+          "stop" : 1675991783980,
+          "duration" : 4836
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(35, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/order/payment/v2/{}', 'get', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','curr_code': 'RUB'}\", 'None', 'json', '$..code', 10000, '通过', 'test_teamorder_payment', 'goodsorderid3;url3', '$..order_no;$..url', 'tenant_id3;tiens_code3', 'team_id3', 'F05S06_组队订单支付', 'F05主流程--组队订单', '正常用例进收银台', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "b6ede68058f0202503a92612c6de2fd8"
+    }, {
+      "name" : "F05S07_选择支付渠道",
+      "children" : [ {
+        "name" : "test_select_paychannel",
+        "uid" : "740dd5c43f84d466",
+        "parentUid" : "2cbc444f94e80f1bfc6fef2ede0481dc",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991783984,
+          "stop" : 1675991789079,
+          "duration" : 5095
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(36, 'https://dev2-ir-kong.tiens.com', '/cashier/api/pay_channel/select?goodsorderid={}&language=zh-cn', 'get', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','curr_code': 'RUB','tenant_id': rd.read_extract_yaml('tenant_id3'),'tiens_code': rd.read_extract_yaml('tiens_code3'),'Referer': 'https://dev2-cashier-uih5.tiens.com/'}\", 'None', 'params', '$..channels[0][channel_code]', 'tiens-pay-testpay-b2c', '通过', 'test_select_paychannel', None, None, None, 'goodsorderid3', 'F05S07_选择支付渠道', 'F05主流程--组队订单', '正常用例先调', 'blocker', None, None, None)" ]
+      } ],
+      "uid" : "2cbc444f94e80f1bfc6fef2ede0481dc"
+    }, {
+      "name" : "F05S08_创建订单",
+      "children" : [ {
+        "name" : "test_create_order",
+        "uid" : "5ec4bdedb152c8a4",
+        "parentUid" : "6476454f4ee7fd8878fd1623758559c1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675991789086,
+          "stop" : 1675991794694,
+          "duration" : 5608
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "(37, 'https://dev2-ir-kong.tiens.com', '/cashier/api/pay/create_order', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','tenant_id': rd.read_extract_yaml('tenant_id3'),'tiens_code': rd.read_extract_yaml('tiens_code3')}\", \"{\\n\\t'goodsorderid': rd.read_extract_yaml('goodsorderid3'),\\n\\t'channel_code': 'tiens-pay-testpay-b2c',\\n\\t'sourcehost': 'https://dev2-cashier-uih5.tiens.com'\\n}\", 'json', '$..status', 'SUCCESS', '通过', 'test_create_order', None, None, None, None, 'F05S08_创建订单', 'F05主流程--组队订单', '正常用例后调', 'blocker', 'select user_distributor_id from trd_order where order_no=\"{}\"', 'goodsorderid3', '数据库校验通过')" ]
+      } ],
+      "uid" : "6476454f4ee7fd8878fd1623758559c1"
+    } ],
+    "uid" : "65c6cfa30c140fffb9ab193f33b2f178"
   } ]
 }

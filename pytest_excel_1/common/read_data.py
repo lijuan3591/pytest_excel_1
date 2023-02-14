@@ -1,4 +1,4 @@
-# coding:utf-8
+# coding:gbk
 # __author__ = 'LiJuan'
 
 import os
@@ -10,11 +10,10 @@ import json
 from configparser import ConfigParser
 from jsonpath import jsonpath
 from common.logger import logger
-from common.public_untils import  YAML_PATH
 
 
 class MyConfigParser(ConfigParser):
-    # é‡å†™ configparser ä¸­çš„ optionxform å‡½æ•°ï¼Œè§£å†³ .ini æ–‡ä»¶ä¸­çš„ é”®option è‡ªåŠ¨è½¬ä¸ºå°å†™çš„é—®é¢˜
+    # ÖØĞ´ configparser ÖĞµÄ optionxform º¯Êı£¬½â¾ö .ini ÎÄ¼şÖĞµÄ ¼üoption ×Ô¶¯×ªÎªĞ¡Ğ´µÄÎÊÌâ
     def __init__(self, defaults=None):
         ConfigParser.__init__(self, defaults=defaults)
 
@@ -26,57 +25,57 @@ class ReadFileData():
     def __init__(self):
         pass
 
-    @allure.step("è¯»å–inié…ç½®æ–‡ä»¶")
+    @allure.step("¶ÁÈ¡iniÅäÖÃÎÄ¼ş")
     def load_ini(self, file_path):
-        logger.info("åŠ è½½ {} æ–‡ä»¶......".format(file_path))
+        logger.info("¼ÓÔØ {} ÎÄ¼ş......".format(file_path))
         config = MyConfigParser()
         config.read(file_path, encoding="UTF-8")
         data = dict(config._sections)
-        # print("è¯»åˆ°æ•°æ® ==>>  {} ".format(data))
+        # print("¶Áµ½Êı¾İ ==>>  {} ".format(data))
         return data
 
-    @allure.step("è¯»å–extract.yamlæ–‡ä»¶")
-    # è¯»å–extract.yamlæ–‡ä»¶
+    @allure.step("¶ÁÈ¡extract.yamlÎÄ¼ş")
+    # ¶ÁÈ¡extract.yamlÎÄ¼ş
     def read_extract_yaml(self, key):
-        with open(YAML_PATH + "\extract.yml", mode='r', encoding='utf-8') as f:
+        with open(os.getcwd() + "/extract.yml", mode='r', encoding='utf-8') as f:
             value = yaml.load(stream=f, Loader=yaml.FullLoader)
             return value[key]
 
 
-    @allure.step("æŠ½å–æ•°æ®å†™å…¥extract.yamlæ–‡ä»¶")
-    # å†™å…¥extract.yamlæ–‡ä»¶
+    @allure.step("³éÈ¡Êı¾İĞ´Èëextract.yamlÎÄ¼ş")
+    # Ğ´Èëextract.yamlÎÄ¼ş
     def write_extract_yaml(self, data):
         with open(os.getcwd() + "/extract.yml", mode='a', encoding='utf-8') as f:
             yaml.dump(data=data, stream=f, allow_unicode=True)
 
-    @allure.step("æ¸…é™¤extract.yamlæ–‡ä»¶")
-    # æ¸…é™¤extract.yamlæ–‡ä»¶
+    @allure.step("Çå³ıextract.yamlÎÄ¼ş")
+    # Çå³ıextract.yamlÎÄ¼ş
     def clear_extract_yaml(self):
         with open(os.getcwd() + "/extract.yml", mode='w', encoding='utf-8') as f:
             f.truncate()
 
 
-    @allure.step("===>æŠ½å–æ•°æ®")
+    @allure.step("===>³éÈ¡Êı¾İ")
     def get_text(self, res, express):
         resp = json.loads(res.text)
         tmp = jsonpath(resp, express)
-        logger.info("tmp[0]çš„å€¼æ˜¯{}".format(tmp[0]))
+        logger.info("tmp[0]µÄÖµÊÇ{}".format(tmp[0]))
         return tmp[0]
 
     def report_api(self,title,feature,story,description,severity):
-        # åŠ¨æ€è·å–æ ‡é¢˜
+        # ¶¯Ì¬»ñÈ¡±êÌâ
         if title:
             allure.dynamic.title(title)
-        # åŠ¨æ€è·å–featureæ¨¡å—
+        # ¶¯Ì¬»ñÈ¡featureÄ£¿é
         if feature:
             allure.dynamic.feature(feature)
-        # åŠ¨æ€è·å–storyæ¨¡å—
+        # ¶¯Ì¬»ñÈ¡storyÄ£¿é
         if story:
             allure.dynamic.story(story)
-        # åŠ¨æ€è·å–å¤‡æ³¨
+        # ¶¯Ì¬»ñÈ¡±¸×¢
         if description:
             allure.dynamic.description(description)
-        # åŠ¨æ€è·å–çº§åˆ«
+        # ¶¯Ì¬»ñÈ¡¼¶±ğ
         if severity:
             allure.dynamic.severity(severity)
 
@@ -91,8 +90,4 @@ if __name__ == '__main__':
     # print(data.get_random_sample(9))
     # print(data.get_random(9))
     value = '${get_random_sample(9)}'
-    # print(rd.get_oldvalue(value,'${get_random_sample(',')}',20,-2))
-    token=rd.read_extract_yaml("tiens_token")
-    id=rd.read_extract_yaml("user_id")
-    print(token)
-    print(id)
+    print(rd.get_oldvalue(value,'${get_random_sample(',')}',20,-2))

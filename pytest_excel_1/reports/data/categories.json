@@ -1,30 +1,5 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
-  "children" : [ {
-    "name" : "Test defects",
-    "children" : [ {
-      "name" : "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
-      "children" : [ {
-        "name" : "test_product_list",
-        "uid" : "f66b02c27e7169bc",
-        "parentUid" : "7bcaf70ebf758f58bb51e7ee5ff79f52",
-        "status" : "broken",
-        "time" : {
-          "start" : 1676017600112,
-          "stop" : 1676017601039,
-          "duration" : 927
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ "(5, 'https://dev2-ru-h5.tiens.com', '/product/api/goods/list', 'post', 'None', '{\"Content-Type\": \"application/json\",\"select_nation_id\": \"RU\",\\'tiens_token\\':rd.read_extract_yaml(\\'tiens_token\\'),\\'user_id\\':rd.read_extract_yaml(\\'user_id\\')}', '{\\n    \"price_type\":\"price\",\\n    \"price_max\":\"\",\\n    \"category_id\":\"12747508\",\\n    \"sort_type\":\"desc\",\\n    \"is_new_product\":False,\\n    \"limit\":20,\\n    \"price_min\":\"\",\\n    \"page\":1,\\n    \"sort_key\":\"default\",\\n    \"brand_id\":\"\"\\n}', 'json', '$..code', 10000, None, 'test_product_list', None, None, None, None, 'F02S01_商品列表', 'F02_商品', None, None, None, None, None)" ]
-      } ],
-      "uid" : "7bcaf70ebf758f58bb51e7ee5ff79f52"
-    } ],
-    "uid" : "bdbf199525818fae7a8651db9eafe741"
-  } ]
+  "children" : [ ]
 }

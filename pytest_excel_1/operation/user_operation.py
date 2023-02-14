@@ -3,7 +3,7 @@
 
 import allure
 from common.logger import logger
-# from common.mysql_operate_order import db
+from common.mysql_operate_order import db
 from common.read_data import rd
 from api.apikey import ak
 
@@ -15,19 +15,29 @@ def step_1(result):
 
 
 @allure.step("===>数据解析")
-def user_order_delivery(method,base_url,url,headers,params,json,json_data):
+def user_order_delivery(method,base_url,url,headers,params,json,json_data,ext):
     try:
         logger.info("*************** 开始执行用例 ***************")
-        if '/{}' in url:
+        if 'checkout/v2/{}' in url:
+            ext = ext.split(';')
             data_dict = {
-                    'url': base_url + url.format(rd.read_extract_yaml('checkout_id')),
+                    'url': base_url + url.format(rd.read_extract_yaml(ext[0])),
                     'headers': eval(headers),
                     'params': eval(params),
                     json: eval(json_data)
                 }
         elif 'goodsorderid' in url:
+            ext = ext.split(';')
             data_dict = {
-                'url': base_url + url.format(rd.read_extract_yaml('goodsorderid')),
+                'url': base_url + url.format(rd.read_extract_yaml(ext[0])),
+                'headers': eval(headers),
+                'params': eval(params),
+                json: eval(json_data)
+            }
+        elif 'payment/v2/{}' in url:
+            ext = ext.split(';')
+            data_dict = {
+                'url': base_url + url.format(rd.read_extract_yaml(ext[0])),
                 'headers': eval(headers),
                 'params': eval(params),
                 json: eval(json_data)
@@ -39,10 +49,12 @@ def user_order_delivery(method,base_url,url,headers,params,json,json_data):
                 'params': eval(params),
                 json: eval(json_data)
             }
+
         logger.info("data_dict的值是{}".format(data_dict))
         # 反射+解包
         res = getattr(ak, method)(**data_dict)
         step_1(res.text)
+        # print(res.json())
         logger.info("返回结果是{}".format(res.text))
         return res
     except Exception as e:
@@ -50,7 +62,7 @@ def user_order_delivery(method,base_url,url,headers,params,json,json_data):
         raise
 
 @allure.step("===>抽取数据")
-def get_extract_data(extract,expr,res):
+def get_extract_data(extract,expr,res,ext):
     if extract is not None:
         extract = extract.split(';')
         expr = expr.split(';')
@@ -58,11 +70,14 @@ def get_extract_data(extract,expr,res):
             newValue = rd.get_text(res, expr[i])
             rd.write_extract_yaml({str(extract[i]): str(newValue)})
             logger.info("提取字段key是：{}，提取的value是：{}".format(extract[i], newValue))
-            if str(extract[i]) == "url":
-                rd.write_extract_yaml({"tenant_id": str(newValue)[54:72]})
-                logger.info("提取字段key--tenant_id是：{}，提取的value是：{}".format(extract[i], str(newValue)[54:72]))
-                rd.write_extract_yaml({"tiens_code": str(newValue)[117:]})
-                logger.info("提取字段key--tiens_code：{}，提取的value是：{}".format(extract[i], str(newValue)[117:]))
+            # if str(extract[i]) == "url":
+            if 'url' in str(extract[i]):
+                ext = ext.split(';')
+                if ext is not None:
+                    rd.write_extract_yaml({ext[0]: str(newValue)[54:72]})
+                    logger.info("提取字段key--tenant_id是：{}，提取的value是：{}".format(extract[i], str(newValue)[54:72]))
+                    rd.write_extract_yaml({ext[1]: str(newValue)[117:]})
+                    logger.info("提取字段key--tiens_code：{}，提取的value是：{}".format(extract[i], str(newValue)[117:]))
 
 
 @allure.step("===>断言")
@@ -83,18 +98,18 @@ def assert_validate(excel,sheet,r,res,expr,exp_msg,path):
     finally:
         excel.save(path)
 
-# @allure.step("===>数据库校验")
-# def check_user_order(sheet,excel,path,r,sql,gsid):
-#     if sql is not None:
-#         sql=sql.format(rd.read_extract_yaml(gsid))
-#         rep = db.select_db(sql)
-#         for dis in rep:
-#             if dis['user_distributor_id'] == rd.read_extract_yaml('distributor_id'):
-#                 sheet.cell(r, 23).value = '数据库校验通过'
-#                 logger.info("数据库校验通过")
-#             else:
-#                 sheet.cell(r, 23).value = '数据库校验失败'
-#                 logger.info("数据库校验失败")
-#     excel.save(path)
-#     logger.info("*************** 结束执行用例 ***************")
+@allure.step("===>数据库校验")
+def check_user_order(sheet,excel,path,r,sql,gsid):
+    if sql is not None:
+        sql=sql.format(rd.read_extract_yaml(gsid))
+        rep = db.select_db(sql)
+        for dis in rep:
+            if dis['user_distributor_id'] == rd.read_extract_yaml('distributor_id'):
+                sheet.cell(r, 23).value = '数据库校验通过'
+                logger.info("数据库校验通过")
+            else:
+                sheet.cell(r, 23).value = '数据库校验失败'
+                logger.info("数据库校验失败")
+    excel.save(path)
+    logger.info("*************** 结束执行用例 ***************")
 
