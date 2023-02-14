@@ -1,0 +1,7 @@
+INFO     log:user_operation.py:20 *************** 开始执行用例 ***************
+INFO     log:user_operation.py:42 data_dict的值是{'url': 'https://dev2-ir-kong.tiens.com/order-aggr/api/shopping_cart/add', 'headers': {'Content-Type': 'application/json', 'select_nation_id': 'RU', 'tiens_token': '93rWShIJVtWvTgMpfoB31wui8uQ=', 'user_id': '1978770718374559746'}, 'params': None, 'json': {'is_point': False, 'is_start_package': False, 'order_type': 1, 'qty': 1, 'sku_id': '11176517', 'is_limit': False}}
+INFO     log:user_operation.py:13 步骤1 ==>>返回结果：{"code":10000,"msg":"","data":{"num":15}}
+INFO     log:user_operation.py:46 返回结果是{"code":10000,"msg":"","data":{"num":15}}
+INFO     log:read_data.py:63 tmp[0]的值是10000
+INFO     log:user_operation.py:72 rel_result的值10000
+INFO     log:user_operation.py:75 测试用例执行成功
