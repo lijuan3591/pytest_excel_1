@@ -1,3 +1,0 @@
-INFO     log:test_03_login.py:127 *************** 开始执行用例 ***************
-INFO     log:user.py:168 go_pay的报错信息：'NoneType' object is not subscriptable
-INFO     log:test_03_login.py:15 步骤1 ==>> 登录用户：/order-aggr/api/checkout/go_pay
