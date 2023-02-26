@@ -1,0 +1,19 @@
+[ {
+  "values" : [ "Chrome" ],
+  "name" : "Browser"
+}, {
+  "values" : [ "100.0.4896.60" ],
+  "name" : "Browser.Version"
+}, {
+  "values" : [ "3.7" ],
+  "name" : "pythonVersion"
+}, {
+  "values" : [ "2.14.0" ],
+  "name" : "allureVersion"
+}, {
+  "values" : [ "pytestDemo1" ],
+  "name" : "projectName"
+}, {
+  "values" : [ "lijuan" ],
+  "name" : "author"
+} ]

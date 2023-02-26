@@ -1,0 +1,438 @@
+{
+  "uid" : "9afce36c07150c19",
+  "name" : "test_select_method_delivery",
+  "fullName" : "testcases.api_test.test_01_login1.TestUserOrderDelivery#test_user_order_delivery",
+  "historyId" : "c155a8c5c47eabe63025cb12352bf3f4",
+  "time" : {
+    "start" : 1675056462844,
+    "stop" : 1675056466317,
+    "duration" : 3473
+  },
+  "description" : "正常用例进结算页",
+  "descriptionHtml" : "<p>正常用例进结算页</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_xunit_setup_module_fixture_testcases.api_test.test_01_login1",
+    "time" : {
+      "start" : 1675056457040,
+      "stop" : 1675056457071,
+      "duration" : 31
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  }, {
+    "name" : "clear_yaml",
+    "time" : {
+      "start" : 1675056457040,
+      "stop" : 1675056457040,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "清除extract.yaml文件",
+      "time" : {
+        "start" : 1675056457040,
+        "stop" : 1675056457040,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "正常用例进结算页",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "===>数据解析",
+      "time" : {
+        "start" : 1675056462844,
+        "stop" : 1675056466285,
+        "duration" : 3441
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "读取extract.yaml文件",
+        "time" : {
+          "start" : 1675056462844,
+          "stop" : 1675056462848,
+          "duration" : 4
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "key",
+          "value" : "'tiens_token'"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "读取extract.yaml文件",
+        "time" : {
+          "start" : 1675056462848,
+          "stop" : 1675056462849,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "key",
+          "value" : "'user_id'"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "读取extract.yaml文件",
+        "time" : {
+          "start" : 1675056462849,
+          "stop" : 1675056462850,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "key",
+          "value" : "'shipping_addrdss_id'"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "读取extract.yaml文件",
+        "time" : {
+          "start" : 1675056462850,
+          "stop" : 1675056462851,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "key",
+          "value" : "'checkout_id'"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "读取extract.yaml文件",
+        "time" : {
+          "start" : 1675056462851,
+          "stop" : 1675056462851,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "key",
+          "value" : "'shipping_id'"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "发送post请求",
+        "time" : {
+          "start" : 1675056462851,
+          "stop" : 1675056466283,
+          "duration" : 3432
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "url",
+          "value" : "'https://dev2-ir-kong.tiens.com/order-aggr/api/checkout/select_shipping_method'"
+        }, {
+          "name" : "data",
+          "value" : "None"
+        }, {
+          "name" : "json",
+          "value" : "{'shipping_type': 1, 'shipping_addrdss_id': '1978821880029888513', 'checkout_id': '2122945400342298624', 'shipping_id': '1162558809932840961'}"
+        }, {
+          "name" : "headers",
+          "value" : "{'tiens_token': 'Wsqg_DBf9_ZpUfzbRI7Kg4SGlV8=', 'user_id': '1978770718374559746', 'shop_id': 'RU998001', 'shoppingcartid': '-1', 'Content-Type': 'application/json', 'select_nation_id': 'RU'}"
+        }, {
+          "name" : "params",
+          "value" : "None"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "===>>返回结果",
+        "time" : {
+          "start" : 1675056466284,
+          "stop" : 1675056466284,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "result",
+          "value" : "'{\"code\":10000,\"msg\":\"\",\"data\":{\"checkout\":{\"shipping_channel\":[{\"id\":\"1162558809932840961\",\"shipping_name\":\"阶梯\",\"url\":\"\",\"app_url\":\"\",\"channel_code\":\"321\",\"type\":1,\"is_selected\":true,\"category_code\":\"express.delivery\"},{\"id\":\"1162559686106169344\",\"shipping_name\":\"自提\",\"url\":\"\",\"app_url\":\"\",\"channel_code\":\"3211\",\"type\":2,\"is_selected\":false,\"category_code\":\"pick.up\"},{\"id\":\"1281477108505321473\",\"shipping_name\":\"顺丰\",\"url\":\"\",\"app_url\":\"\",\"channel_code\":\"顺丰\",\"type\":1,\"is_selected\":false,\"category_code\":\"express.delivery\"},{\"id\":\"1281472607379595265\",\"shipping_name\":\"按重计费\",\"url\":\"\",\"app_url\":\"\",\"channel_code\":\"code\",\"type\":1,\"is_selected\":false,\"category_code\":\"express.delivery\"},{\"id\":\"1162460953397968897\",\"shipping_name\":\"CDEK\",\"url\":\"https://test-i.tiens.com/pocket-dc1/i/2021/4/sns/1165531906555535360.png\",\"app_url\":\"https://test-i.tiens.com/pocket-dc1/i/2021/4/sns/1165531906555535360.png\",\"channel_code\":\"CDEK\",\"type\":1,\"is_selected\":false,\"category_code\":\"express.delivery\"},{\"id\":\"1391221872336875689\",\"shipping_name\":\"集运\",\"url\":\"\",\"app_url\":\"\",\"channel_code\":\"consolidation-test\",\"type\":4,\"is_selected\":false,\"category_code\":\"consolidation\"}],\"shipping_address_id\":1978821880029888513,\"billing_address_id\":\"1978821880029888513\",\"address_shipping\":{\"id\":\"1978821880029888513\",\"address_detail\":\"Россия,Алтайский край,Барнаул\",\"last_name\":\"\",\"first_name\":\"\",\"name\":\"dd aa\",\"mobile\":\"\",\"is_default\":true,\"pick_shop_code\":null,\"pickup_user_name\":null,\"pickup_user_phone\":null,\"email\":\"fsfs@fsfsd.com\",\"mobile_area_code\":\"7\"},\"pickup_address\":null,\"is_open_billing_address\":false,\"address_billing\":{\"id\":\"1978821880029888513\",\"address_detail\":\"Россия,Алтайский край,Барнаул\",\"last_name\":\"\",\"first_name\":\"\",\"name\":\"dd aa\",\"mobile\":\"\",\"is_default\":true,\"pick_shop_code\":null,\"pickup_user_name\":null,\"pickup_user_phone\":null,\"email\":null,\"mobile_area_code\":null},\"shipping_station\":null,\"station_user_phone\":\"\",\"station_user_name\":\"\",\"purchase_id\":0,\"purchase_distributor_id\":\"1532143\",\"purchase_name\":\"\",\"performance_period\":\"202302\",\"order_type\":1,\"shopping_terms\":[],\"shipping_user_name\":\"dd aa\",\"performance_org\":{\"parent_org_code\":null,\"org_code\":\"RU993461\",\"performance_use_type\":2,\"performance_name\":null},\"shipping_type\":1,\"shipping_user_mobile\":null,\"org_id\":null,\"org_shop_id\":null,\"is_open_purchase\":false,\"is_open_Offline\":true,\"is_open_online\":true,\"is_default_pay_type\":1,\"pay_type\":1,\"is_show_self\":true,\"is_show_period\":true,\"is_show_team\":true,\"team_id\":null,\"team_no\":null,\"capital_account\":{\"is_show_capital\":false,\"is_have_account\":null,\"use_amount\":null,\"use_amount_value\":null,\"account_balance\":null,\"account_balance_value\":null,\"max_use_amount\":null,\"max_use_amount_value\":null,\"is_init_password\":null,\"confirm_use_amount\":null,\"confirm_use_amount_value\":null},\"shop_is_open_pickup\":true,\"coupon_info\":null,\"is_show_offline_info\":true,\"is_show_offline_extra_amount\":false,\"is_show_offline_extra_taxamount\":false,\"free_freight\":{\"type\":0,\"content\":\"\"},\"is_show_point_discount\":false,\"point_discount_switch_status\":false,\"achieve_mobile_areacode\":null,\"achieve_mobile\":null},\"shopping_carts\":[{\"id\":2122945383162429442,\"sku_id\":10860172,\"sku_code\":\"SP0602445\",\"product_url\":\"https://test-i.tiens.com/pocket-dc1/i/album/RU/202207/1845415488520617985.jpg?template=2&shape=2&w=500&h=500&q=80&format=jpg\",\"product_name\":\"SP0602445的本地名称\",\"discount_name\":[],\"card_type\":10,\"card_discount_amount\":\"20,00₽\",\"card_discount_amount_value\":20.00,\"card_discount_description\":\"Bronze-20,00₽\",\"unit_price\":\"1 000,00₽\",\"unit_price_value\":1000.0000,\"origin_price_value\":1000.0000,\"sub_price\":\"980,00₽\",\"measure_level_sub_price\":237.08,\"measure_point_sub_price\":0,\"unit_pv_value\":20.0000,\"unit_pv\":\"20,00\",\"sub_pv\":\"19,60\",\"unit_bv\":\"20,00\",\"unit_bv_value\":20.0000,\"sub_bv\":\"19,60\",\"qty\":1,\"is_gift\":false,\"is_stock\":true,\"is_invalidation\":false,\"is_start_package\":false,\"length\":0.0000,\"width\":0.0000,\"hight\":0.0000,\"weight\":0.2100,\"tax_rate\":0.18000000,\"tax_id\":10059701,\"is_free_shipping\":false,\"is_multi_discounts\":true,\"is_show_bvpv\":true,\"real_unit_price\":742.92,\"real_unit_bv\":19.60,\"real_unit_pv\":19.60,\"gifts\":[],\"prompt_info\":[],\"is_seckill\":false,\"seckill_countdown_time\":null,\"seckill_discount_rate\":null,\"is_point\":false,\"sale_point_value\":0,\"sale_point\":null,\"is_show_member_discount\":false,\"is_limit\":false,\"limit_start_date\":null,\"limit_end_date\":null}],\"order_total\":{\"order_total\":\"1 000,00₽\",\"order_total_value\":1000.0000,\"exclude_order_total\":\"629,59₽\",\"exclude_order_total_value\":629.59,\"include_order_total\":\"742,92₽\",\"include_order_total_value\":742.92,\"taxes\":[],\"discounts\":[{\"key\":\"Development Discount\",\"value\":\"-20,00₽\"},{\"key\":\"Level Discount\",\"value\":\"-237,08₽\"}],\"total_pv\":\"19,60\",\"total_bv\":\"19,60\",\"shipping_cost\":\"60,00₽\",\"shipping_cost_value\":60.00,\"reduction_shipping_cost\":null,\"reduction_shipping_cost_value\":null,\"shipping_cost_desc\":null,\"shipping_match_failed\":null,\"shipping_compute_issuccess\":true,\"shipping_cost_is_offpay\":false,\"funds_value\":0,\"funds\":\"-0,00₽\",\"pay_amount\":\"802,92₽\",\"pay_amount_value\":802.92,\"promotion_summarys\":{\"promotion_summary\":[],\"promotion_total_format\":null,\"promotion_total_value\":0},\"is_show_bvpv\":true,\"pay_amount_nocapital\":\"802,92₽\",\"pay_amount_nocapital_value\":802.92,\"pay_amount_noshipping\":\"742,92₽\",\"pay_amount_noshipping_value\":742.92,\"discount_total\":\"-257,08₽\",\"discount_total_value\":257.08,\"tax_total\":\"0,00₽\",\"tax_total_value\":0,\"external_taxes\":[{\"key\":\"VAT\",\"value\":\"113,33₽\"}],\"extra_charge_amount_value\":null,\"extra_charge_amount\":null,\"extra_charge_taxamount\":null,\"extra_charge_taxamount_value\":null,\"use_point_value\":0,\"use_point\":\"0,00\"},\"wholeorder_gifts\":{\"total_gift_num\":0,\"giftVos\":[]},\"coupon_list\":[],\"promotion_gift\":{\"total_gift_num\":0,\"giftVos\":[]}}}'"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "method",
+        "value" : "'post'"
+      }, {
+        "name" : "base_url",
+        "value" : "'https://dev2-ir-kong.tiens.com'"
+      }, {
+        "name" : "url",
+        "value" : "'/order-aggr/api/checkout/select_shipping_method'"
+      }, {
+        "name" : "headers",
+        "value" : "'{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}'"
+      }, {
+        "name" : "params",
+        "value" : "'None'"
+      }, {
+        "name" : "json",
+        "value" : "'json'"
+      }, {
+        "name" : "json_data",
+        "value" : "'{\n\t'shipping_type': 1,\n\t'shipping_addrdss_id': rd.read_extract_yaml('shipping_addrdss_id'),\n\t'checkout_id': rd.read_extract_yaml('checkout_id'),\n\t'shipping_id': rd.read_extract_yaml('shipping_id')\n}'"
+      } ],
+      "hasContent" : true,
+      "stepsCount" : 7,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "===>断言",
+      "time" : {
+        "start" : 1675056466285,
+        "stop" : 1675056466303,
+        "duration" : 18
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "===>抽取数据",
+        "time" : {
+          "start" : 1675056466285,
+          "stop" : 1675056466288,
+          "duration" : 3
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "res",
+          "value" : "<Response [200]>"
+        }, {
+          "name" : "express",
+          "value" : "'$..code'"
+        } ],
+        "hasContent" : true,
+        "stepsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "excel",
+        "value" : "<openpyxl.workbook.workbook.Workbook object at 0x000001AFC9D3A828>"
+      }, {
+        "name" : "sheet",
+        "value" : "<Worksheet \"info\">"
+      }, {
+        "name" : "r",
+        "value" : "6"
+      }, {
+        "name" : "res",
+        "value" : "<Response [200]>"
+      }, {
+        "name" : "expr",
+        "value" : "'$..code'"
+      }, {
+        "name" : "exp_msg",
+        "value" : "10000"
+      }, {
+        "name" : "path",
+        "value" : "'D:\\pytest_excel_1\\data\\vshare.xlsx'"
+      } ],
+      "hasContent" : true,
+      "stepsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "===>抽取数据",
+      "time" : {
+        "start" : 1675056466303,
+        "stop" : 1675056466303,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "extract",
+        "value" : "None"
+      }, {
+        "name" : "expr",
+        "value" : "None"
+      }, {
+        "name" : "res",
+        "value" : "<Response [200]>"
+      } ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "===>数据库校验",
+      "time" : {
+        "start" : 1675056466304,
+        "stop" : 1675056466317,
+        "duration" : 13
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "sheet",
+        "value" : "<Worksheet \"info\">"
+      }, {
+        "name" : "excel",
+        "value" : "<openpyxl.workbook.workbook.Workbook object at 0x000001AFC9D3A828>"
+      }, {
+        "name" : "path",
+        "value" : "'D:\\pytest_excel_1\\data\\vshare.xlsx'"
+      }, {
+        "name" : "r",
+        "value" : "6"
+      }, {
+        "name" : "sql",
+        "value" : "None"
+      }, {
+        "name" : "gsid",
+        "value" : "None"
+      } ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "5271dacba60a56b",
+      "name" : "log",
+      "source" : "5271dacba60a56b.txt",
+      "type" : "text/plain",
+      "size" : 12563
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 12,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1
+  },
+  "afterStages" : [ {
+    "name" : "_xunit_setup_module_fixture_testcases.api_test.test_01_login1::0",
+    "time" : {
+      "start" : 1675056472753,
+      "stop" : 1675056472753,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "F03_结算"
+  }, {
+    "name" : "story",
+    "value" : "F03S02_选择快递发运"
+  }, {
+    "name" : "severity",
+    "value" : "blocker"
+  }, {
+    "name" : "tag",
+    "value" : "smoke"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcases.api_test"
+  }, {
+    "name" : "suite",
+    "value" : "test_01_login1"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestUserOrderDelivery"
+  }, {
+    "name" : "host",
+    "value" : "lijuan"
+  }, {
+    "name" : "thread",
+    "value" : "17912-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcases.api_test.test_01_login1"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "(5, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout/select_shipping_method', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", \"{\\n\\t'shipping_type': 1,\\n\\t'shipping_addrdss_id': rd.read_extract_yaml('shipping_addrdss_id'),\\n\\t'checkout_id': rd.read_extract_yaml('checkout_id'),\\n\\t'shipping_id': rd.read_extract_yaml('shipping_id')\\n}\", 'json', '$..code', 10000, '通过', 'test_select_method_delivery', None, None, None, None, 'F03S02_选择快递发运', 'F03_结算', '正常用例进结算页', 'blocker', None, None, None)"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "blocker",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "smoke" ]
+  },
+  "source" : "9afce36c07150c19.json",
+  "parameterValues" : [ "(5, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout/select_shipping_method', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type':'application/json','select_nation_id':'RU'}\", \"{\\n\\t'shipping_type': 1,\\n\\t'shipping_addrdss_id': rd.read_extract_yaml('shipping_addrdss_id'),\\n\\t'checkout_id': rd.read_extract_yaml('checkout_id'),\\n\\t'shipping_id': rd.read_extract_yaml('shipping_id')\\n}\", 'json', '$..code', 10000, '通过', 'test_select_method_delivery', None, None, None, None, 'F03S02_选择快递发运', 'F03_结算', '正常用例进结算页', 'blocker', None, None, None)" ]
+}

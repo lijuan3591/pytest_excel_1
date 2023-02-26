@@ -1,0 +1,9 @@
+INFO     log:user_operation.py:20 *************** 开始执行用例 ***************
+INFO     log:user_operation.py:53 data_dict的值是{'url': 'https://dev2-ir-kong.tiens.com/cashier/api/pay/create_order', 'headers': {'tiens_token': 'qzH3IE819_2A2DjL5JhyjE7PN8E=', 'user_id': '1978770718374559746', 'shop_id': 'RU998001', 'shoppingcartid': '-1', 'Content-Type': 'application/json', 'select_nation_id': 'RU', 'tenant_id': '589750480639467571', 'tiens_code': 'NnTPtUpfi3kfflNxFEGduuOsmJX2jwen4kapQxq51n5ZTYzp89srUUCZqAWamBnO29dfbiZRHLu90wR4LZvkQgUV6XdnVGiBaMQOvaKybMGptO-Uzm-SrCwgCZCBSffZv8oRQ4VOuH5jwQ3Nw9_L5XKMaan5xLum79VbsyWn0JM='}, 'params': None, 'json': {'goodsorderid': '99812302100019', 'channel_code': 'tiens-pay-testpay-b2c', 'sourcehost': 'https://dev2-cashier-uih5.tiens.com'}}
+INFO     log:user_operation.py:13 步骤1 ==>>返回结果：{"root":{"type":"redirect","url":"https://dev2-ir-pocket-pub.tiens.com/public/589750480639467571/testpayb2c/public/channel/return?orderid=99812302100019","html":"","status":"SUCCESS","msg":"短路支付","data":null,"payorderid":"99812302100019","auto_submit":false}}
+INFO     log:user_operation.py:58 返回结果是{"root":{"type":"redirect","url":"https://dev2-ir-pocket-pub.tiens.com/public/589750480639467571/testpayb2c/public/channel/return?orderid=99812302100019","html":"","status":"SUCCESS","msg":"短路支付","data":null,"payorderid":"99812302100019","auto_submit":false}}
+INFO     log:read_data.py:62 tmp[0]的值是SUCCESS
+INFO     log:user_operation.py:87 rel_result的值SUCCESS
+INFO     log:user_operation.py:90 测试用例执行成功
+INFO     log:user_operation.py:109 数据库校验通过
+INFO     log:user_operation.py:114 *************** 结束执行用例 ***************

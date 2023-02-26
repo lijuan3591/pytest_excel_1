@@ -1,0 +1,500 @@
+{
+  "uid" : "bf3d3c574b2248c6",
+  "name" : "test_create_order",
+  "fullName" : "testcases.api_test.test_01_user_order.TestUserOrderDelivery#test_user_order_delivery",
+  "historyId" : "e072261bc5d1ad10a0a8f4a341347f1f",
+  "time" : {
+    "start" : 1675991685421,
+    "stop" : 1675991686116,
+    "duration" : 695
+  },
+  "description" : "正常用例后调",
+  "descriptionHtml" : "<p>正常用例后调</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_xunit_setup_module_fixture_testcases.api_test.test_01_user_order",
+    "time" : {
+      "start" : 1675991678480,
+      "stop" : 1675991680221,
+      "duration" : 1741
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "clear_yaml",
+    "time" : {
+      "start" : 1675991678479,
+      "stop" : 1675991678480,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "清除extract.yaml文件",
+      "time" : {
+        "start" : 1675991678479,
+        "stop" : 1675991678480,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "正常用例后调",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "===>数据解析",
+      "time" : {
+        "start" : 1675991685421,
+        "stop" : 1675991685638,
+        "duration" : 217
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "读取extract.yaml文件",
+        "time" : {
+          "start" : 1675991685423,
+          "stop" : 1675991685425,
+          "duration" : 2
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "key",
+          "value" : "'tiens_token'"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "读取extract.yaml文件",
+        "time" : {
+          "start" : 1675991685425,
+          "stop" : 1675991685428,
+          "duration" : 3
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "key",
+          "value" : "'user_id'"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "读取extract.yaml文件",
+        "time" : {
+          "start" : 1675991685428,
+          "stop" : 1675991685430,
+          "duration" : 2
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "key",
+          "value" : "'tenant_id4'"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "读取extract.yaml文件",
+        "time" : {
+          "start" : 1675991685430,
+          "stop" : 1675991685432,
+          "duration" : 2
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "key",
+          "value" : "'tiens_code4'"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "读取extract.yaml文件",
+        "time" : {
+          "start" : 1675991685433,
+          "stop" : 1675991685434,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "key",
+          "value" : "'goodsorderid4'"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "发送post请求",
+        "time" : {
+          "start" : 1675991685435,
+          "stop" : 1675991685637,
+          "duration" : 202
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "url",
+          "value" : "'https://dev2-ir-kong.tiens.com/cashier/api/pay/create_order'"
+        }, {
+          "name" : "data",
+          "value" : "None"
+        }, {
+          "name" : "json",
+          "value" : "{'goodsorderid': '99812302100016', 'channel_code': 'tiens-pay-testpay-b2c', 'sourcehost': 'https://dev2-cashier-uih5.tiens.com'}"
+        }, {
+          "name" : "headers",
+          "value" : "{'tiens_token': 'qzH3IE819_2A2DjL5JhyjE7PN8E=', 'user_id': '1978770718374559746', 'shop_id': 'RU998001', 'shoppingcartid': '-1', 'Content-Type': 'application/json', 'select_nation_id': 'RU', 'tenant_id': '589750480639467571', 'tiens_code': 'VitB3ZES8wf8daYrTiX_qLdr_pe4ulFC1RGdO8k6ZLzfN849Rv95koBMb2vz8pci8ne9REmeSADqaYqSTHvekjirYSktrksk-o48ny7Vk6pwsL72LZoI0_GKc5Nvhru9lPXCa-039zDuqXGQRP9LscXsIEfTaGHz0PyHpVNsj7o='}"
+        }, {
+          "name" : "params",
+          "value" : "None"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "===>>返回结果",
+        "time" : {
+          "start" : 1675991685637,
+          "stop" : 1675991685637,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "result",
+          "value" : "'{\"root\":{\"type\":\"redirect\",\"url\":\"https://dev2-ir-pocket-pub.tiens.com/public/589750480639467571/testpayb2c/public/channel/return?orderid=99812302100016\",\"html\":\"\",\"status\":\"SUCCESS\",\"msg\":\"短路支付\",\"data\":null,\"payorderid\":\"99812302100016\",\"auto_submit\":false}}'"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "method",
+        "value" : "'post'"
+      }, {
+        "name" : "base_url",
+        "value" : "'https://dev2-ir-kong.tiens.com'"
+      }, {
+        "name" : "url",
+        "value" : "'/cashier/api/pay/create_order'"
+      }, {
+        "name" : "headers",
+        "value" : "'{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','tenant_id': rd.read_extract_yaml('tenant_id4'),'tiens_code': rd.read_extract_yaml('tiens_code4')}'"
+      }, {
+        "name" : "params",
+        "value" : "'None'"
+      }, {
+        "name" : "json",
+        "value" : "'json'"
+      }, {
+        "name" : "json_data",
+        "value" : "'{\n\t'goodsorderid': rd.read_extract_yaml('goodsorderid4'),\n\t'channel_code': 'tiens-pay-testpay-b2c',\n\t'sourcehost': 'https://dev2-cashier-uih5.tiens.com'\n}'"
+      }, {
+        "name" : "ext",
+        "value" : "None"
+      } ],
+      "stepsCount" : 7,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "===>断言",
+      "time" : {
+        "start" : 1675991685638,
+        "stop" : 1675991685806,
+        "duration" : 168
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "===>抽取数据",
+        "time" : {
+          "start" : 1675991685638,
+          "stop" : 1675991685639,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "res",
+          "value" : "<Response [200]>"
+        }, {
+          "name" : "express",
+          "value" : "'$..status'"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "excel",
+        "value" : "<openpyxl.workbook.workbook.Workbook object at 0x000001F9EC7EFB38>"
+      }, {
+        "name" : "sheet",
+        "value" : "<Worksheet \"info\">"
+      }, {
+        "name" : "r",
+        "value" : "9"
+      }, {
+        "name" : "res",
+        "value" : "<Response [200]>"
+      }, {
+        "name" : "expr",
+        "value" : "'$..status'"
+      }, {
+        "name" : "exp_msg",
+        "value" : "'SUCCESS'"
+      }, {
+        "name" : "path",
+        "value" : "'D:\\pytest_excel_1\\data\\vshare.xlsx'"
+      } ],
+      "stepsCount" : 1,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "===>抽取数据",
+      "time" : {
+        "start" : 1675991685806,
+        "stop" : 1675991685806,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "extract",
+        "value" : "None"
+      }, {
+        "name" : "expr",
+        "value" : "None"
+      }, {
+        "name" : "res",
+        "value" : "<Response [200]>"
+      }, {
+        "name" : "ext",
+        "value" : "None"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "===>数据库校验",
+      "time" : {
+        "start" : 1675991685806,
+        "stop" : 1675991686115,
+        "duration" : 309
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "读取extract.yaml文件",
+        "time" : {
+          "start" : 1675991685806,
+          "stop" : 1675991685810,
+          "duration" : 4
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "key",
+          "value" : "'goodsorderid4'"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "读取extract.yaml文件",
+        "time" : {
+          "start" : 1675991685838,
+          "stop" : 1675991685840,
+          "duration" : 2
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "key",
+          "value" : "'distributor_id'"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "sheet",
+        "value" : "<Worksheet \"info\">"
+      }, {
+        "name" : "excel",
+        "value" : "<openpyxl.workbook.workbook.Workbook object at 0x000001F9EC7EFB38>"
+      }, {
+        "name" : "path",
+        "value" : "'D:\\pytest_excel_1\\data\\vshare.xlsx'"
+      }, {
+        "name" : "r",
+        "value" : "9"
+      }, {
+        "name" : "sql",
+        "value" : "'select user_distributor_id from trd_order where order_no=\"{}\"'"
+      }, {
+        "name" : "gsid",
+        "value" : "'goodsorderid4'"
+      } ],
+      "stepsCount" : 2,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "f7cfaa9281133784",
+      "name" : "log",
+      "source" : "f7cfaa9281133784.txt",
+      "type" : "text/plain",
+      "size" : 1747
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 14,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "_xunit_setup_module_fixture_testcases.api_test.test_01_user_order::0",
+    "time" : {
+      "start" : 1675991794695,
+      "stop" : 1675991794695,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "F01主流程--拓展订单"
+  }, {
+    "name" : "story",
+    "value" : "F01S08_支付订单"
+  }, {
+    "name" : "severity",
+    "value" : "blocker"
+  }, {
+    "name" : "tag",
+    "value" : "smoke"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcases.api_test"
+  }, {
+    "name" : "suite",
+    "value" : "test_01_user_order"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestUserOrderDelivery"
+  }, {
+    "name" : "host",
+    "value" : "lijuan"
+  }, {
+    "name" : "thread",
+    "value" : "14020-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcases.api_test.test_01_user_order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "(8, 'https://dev2-ir-kong.tiens.com', '/cashier/api/pay/create_order', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','tenant_id': rd.read_extract_yaml('tenant_id4'),'tiens_code': rd.read_extract_yaml('tiens_code4')}\", \"{\\n\\t'goodsorderid': rd.read_extract_yaml('goodsorderid4'),\\n\\t'channel_code': 'tiens-pay-testpay-b2c',\\n\\t'sourcehost': 'https://dev2-cashier-uih5.tiens.com'\\n}\", 'json', '$..status', 'SUCCESS', '通过', 'test_create_order', None, None, None, None, 'F01S08_支付订单', 'F01主流程--拓展订单', '正常用例后调', 'blocker', 'select user_distributor_id from trd_order where order_no=\"{}\"', 'goodsorderid4', '数据库校验通过')"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "blocker",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "14c6eee8b0f01d16",
+        "reportUrl" : "http://localhost:8888/job/python_pytest_excel/2/allure/#testresult/14c6eee8b0f01d16",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675990460265,
+          "stop" : 1675990460990,
+          "duration" : 725
+        }
+      } ]
+    },
+    "tags" : [ "smoke" ]
+  },
+  "source" : "bf3d3c574b2248c6.json",
+  "parameterValues" : [ "(8, 'https://dev2-ir-kong.tiens.com', '/cashier/api/pay/create_order', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','tenant_id': rd.read_extract_yaml('tenant_id4'),'tiens_code': rd.read_extract_yaml('tiens_code4')}\", \"{\\n\\t'goodsorderid': rd.read_extract_yaml('goodsorderid4'),\\n\\t'channel_code': 'tiens-pay-testpay-b2c',\\n\\t'sourcehost': 'https://dev2-cashier-uih5.tiens.com'\\n}\", 'json', '$..status', 'SUCCESS', '通过', 'test_create_order', None, None, None, None, 'F01S08_支付订单', 'F01主流程--拓展订单', '正常用例后调', 'blocker', 'select user_distributor_id from trd_order where order_no=\"{}\"', 'goodsorderid4', '数据库校验通过')" ]
+}

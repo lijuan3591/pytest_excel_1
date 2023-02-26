@@ -1,0 +1,467 @@
+{
+  "uid" : "8f1380dcf76c0251",
+  "name" : "test_go_pay",
+  "fullName" : "testcases.api_test.test_01_user_order.TestUserOrderDelivery#test_user_order_delivery",
+  "historyId" : "25420598367d1de0939af604c3a786a2",
+  "time" : {
+    "start" : 1675991771543,
+    "stop" : 1675991779136,
+    "duration" : 7593
+  },
+  "description" : "正常用例进收银台",
+  "descriptionHtml" : "<p>正常用例进收银台</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_xunit_setup_module_fixture_testcases.api_test.test_01_user_order",
+    "time" : {
+      "start" : 1675991678480,
+      "stop" : 1675991680221,
+      "duration" : 1741
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "clear_yaml",
+    "time" : {
+      "start" : 1675991678479,
+      "stop" : 1675991678480,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "清除extract.yaml文件",
+      "time" : {
+        "start" : 1675991678479,
+        "stop" : 1675991678480,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "正常用例进收银台",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "===>数据解析",
+      "time" : {
+        "start" : 1675991771544,
+        "stop" : 1675991774077,
+        "duration" : 2533
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "读取extract.yaml文件",
+        "time" : {
+          "start" : 1675991771545,
+          "stop" : 1675991771555,
+          "duration" : 10
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "key",
+          "value" : "'tiens_token'"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "读取extract.yaml文件",
+        "time" : {
+          "start" : 1675991771556,
+          "stop" : 1675991771563,
+          "duration" : 7
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "key",
+          "value" : "'user_id'"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "读取extract.yaml文件",
+        "time" : {
+          "start" : 1675991771563,
+          "stop" : 1675991771570,
+          "duration" : 7
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "key",
+          "value" : "'checkout_id3'"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "发送post请求",
+        "time" : {
+          "start" : 1675991771571,
+          "stop" : 1675991774077,
+          "duration" : 2506
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "url",
+          "value" : "'https://dev2-ir-kong.tiens.com/order-aggr/api/checkout/go_pay'"
+        }, {
+          "name" : "data",
+          "value" : "None"
+        }, {
+          "name" : "json",
+          "value" : "{'checkout_id': '2139013749169963009', 'note': ''}"
+        }, {
+          "name" : "headers",
+          "value" : "{'tiens_token': 'qzH3IE819_2A2DjL5JhyjE7PN8E=', 'user_id': '1978770718374559746', 'shop_id': 'RU998001', 'shoppingcartid': '-1', 'Content-Type': 'application/json', 'select_nation_id': 'RU', 'curr_code': 'RUB'}"
+        }, {
+          "name" : "params",
+          "value" : "None"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "===>>返回结果",
+        "time" : {
+          "start" : 1675991774077,
+          "stop" : 1675991774077,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "result",
+          "value" : "'{\"code\":10000,\"msg\":\"\",\"data\":{\"url\":\"\",\"orderId\":\"2139014006868000772\",\"orderNo\":\"99812302100020\",\"is_zero\":false,\"is_team\":true,\"team_id\":\"2139014006868000771\",\"success\":true,\"payment_type\":1}}'"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "method",
+        "value" : "'post'"
+      }, {
+        "name" : "base_url",
+        "value" : "'https://dev2-ir-kong.tiens.com'"
+      }, {
+        "name" : "url",
+        "value" : "'/order-aggr/api/checkout/go_pay'"
+      }, {
+        "name" : "headers",
+        "value" : "'{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','curr_code': 'RUB'}'"
+      }, {
+        "name" : "params",
+        "value" : "'None'"
+      }, {
+        "name" : "json",
+        "value" : "'json'"
+      }, {
+        "name" : "json_data",
+        "value" : "'{'checkout_id':rd.read_extract_yaml('checkout_id3'),'note':''}'"
+      }, {
+        "name" : "ext",
+        "value" : "None"
+      } ],
+      "stepsCount" : 5,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "===>断言",
+      "time" : {
+        "start" : 1675991774077,
+        "stop" : 1675991776408,
+        "duration" : 2331
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "===>抽取数据",
+        "time" : {
+          "start" : 1675991774077,
+          "stop" : 1675991774078,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "res",
+          "value" : "<Response [200]>"
+        }, {
+          "name" : "express",
+          "value" : "'$..code'"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "excel",
+        "value" : "<openpyxl.workbook.workbook.Workbook object at 0x000001F9EC7EFB38>"
+      }, {
+        "name" : "sheet",
+        "value" : "<Worksheet \"info\">"
+      }, {
+        "name" : "r",
+        "value" : "35"
+      }, {
+        "name" : "res",
+        "value" : "<Response [200]>"
+      }, {
+        "name" : "expr",
+        "value" : "'$..code'"
+      }, {
+        "name" : "exp_msg",
+        "value" : "10000"
+      }, {
+        "name" : "path",
+        "value" : "'D:\\pytest_excel_1\\data\\vshare.xlsx'"
+      } ],
+      "stepsCount" : 1,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "===>抽取数据",
+      "time" : {
+        "start" : 1675991776409,
+        "stop" : 1675991776410,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "===>抽取数据",
+        "time" : {
+          "start" : 1675991776409,
+          "stop" : 1675991776409,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "res",
+          "value" : "<Response [200]>"
+        }, {
+          "name" : "express",
+          "value" : "'$..team_id'"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "抽取数据写入extract.yaml文件",
+        "time" : {
+          "start" : 1675991776409,
+          "stop" : 1675991776410,
+          "duration" : 1
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "data",
+          "value" : "{'team_id3': '2139014006868000771'}"
+        } ],
+        "stepsCount" : 0,
+        "hasContent" : true,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "extract",
+        "value" : "'team_id3'"
+      }, {
+        "name" : "expr",
+        "value" : "'$..team_id'"
+      }, {
+        "name" : "res",
+        "value" : "<Response [200]>"
+      }, {
+        "name" : "ext",
+        "value" : "None"
+      } ],
+      "stepsCount" : 2,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "===>数据库校验",
+      "time" : {
+        "start" : 1675991776411,
+        "stop" : 1675991779136,
+        "duration" : 2725
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "sheet",
+        "value" : "<Worksheet \"info\">"
+      }, {
+        "name" : "excel",
+        "value" : "<openpyxl.workbook.workbook.Workbook object at 0x000001F9EC7EFB38>"
+      }, {
+        "name" : "path",
+        "value" : "'D:\\pytest_excel_1\\data\\vshare.xlsx'"
+      }, {
+        "name" : "r",
+        "value" : "35"
+      }, {
+        "name" : "sql",
+        "value" : "None"
+      }, {
+        "name" : "gsid",
+        "value" : "None"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "661697a66af7cad1",
+      "name" : "log",
+      "source" : "661697a66af7cad1.txt",
+      "type" : "text/plain",
+      "size" : 1431
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 12,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "_xunit_setup_module_fixture_testcases.api_test.test_01_user_order::0",
+    "time" : {
+      "start" : 1675991794695,
+      "stop" : 1675991794695,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "F05主流程--组队订单"
+  }, {
+    "name" : "story",
+    "value" : "F05S05_进入组队订单页"
+  }, {
+    "name" : "severity",
+    "value" : "blocker"
+  }, {
+    "name" : "tag",
+    "value" : "smoke"
+  }, {
+    "name" : "parentSuite",
+    "value" : "testcases.api_test"
+  }, {
+    "name" : "suite",
+    "value" : "test_01_user_order"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestUserOrderDelivery"
+  }, {
+    "name" : "host",
+    "value" : "lijuan"
+  }, {
+    "name" : "thread",
+    "value" : "14020-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcases.api_test.test_01_user_order"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "(34, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout/go_pay', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','curr_code': 'RUB'}\", \"{'checkout_id':rd.read_extract_yaml('checkout_id3'),'note':''}\", 'json', '$..code', 10000, '通过', 'test_go_pay', 'team_id3', '$..team_id', None, None, 'F05S05_进入组队订单页', 'F05主流程--组队订单', '正常用例进收银台', 'blocker', None, None, None)"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "blocker",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "f9596c0f2104673a",
+        "reportUrl" : "http://localhost:8888/job/python_pytest_excel/2/allure/#testresult/f9596c0f2104673a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1675990613403,
+          "stop" : 1675990624640,
+          "duration" : 11237
+        }
+      } ]
+    },
+    "tags" : [ "smoke" ]
+  },
+  "source" : "8f1380dcf76c0251.json",
+  "parameterValues" : [ "(34, 'https://dev2-ir-kong.tiens.com', '/order-aggr/api/checkout/go_pay', 'post', 'None', \"{'tiens_token':rd.read_extract_yaml('tiens_token'),'user_id':rd.read_extract_yaml('user_id'),'shop_id':'RU998001','shoppingcartid':'-1','Content-Type': 'application/json','select_nation_id': 'RU','curr_code': 'RUB'}\", \"{'checkout_id':rd.read_extract_yaml('checkout_id3'),'note':''}\", 'json', '$..code', 10000, '通过', 'test_go_pay', 'team_id3', '$..team_id', None, None, 'F05S05_进入组队订单页', 'F05主流程--组队订单', '正常用例进收银台', 'blocker', None, None, None)" ]
+}

@@ -1,0 +1,241 @@
+[ {
+  "buildOrder" : 3,
+  "reportUrl" : "http://localhost:8888/job/python_pytest_excel/3/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 37,
+    "unknown" : 0,
+    "total" : 37
+  }
+}, {
+  "buildOrder" : 2,
+  "reportUrl" : "http://localhost:8888/job/python_pytest_excel/2/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 6,
+    "skipped" : 0,
+    "passed" : 31,
+    "unknown" : 0,
+    "total" : 37
+  }
+}, {
+  "buildOrder" : 1,
+  "reportUrl" : "http://localhost:8888/job/python_pytest_excel/1/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 8,
+    "unknown" : 0,
+    "total" : 8
+  }
+}, {
+  "buildOrder" : 61,
+  "reportUrl" : "http://localhost:8888/job/python_pytest/61/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 24,
+    "unknown" : 0,
+    "total" : 24
+  }
+}, {
+  "buildOrder" : 60,
+  "reportUrl" : "http://localhost:8888/job/python_pytest/60/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 24,
+    "unknown" : 0,
+    "total" : 24
+  }
+}, {
+  "buildOrder" : 59,
+  "reportUrl" : "http://localhost:8888/job/python_pytest/59/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 24,
+    "unknown" : 0,
+    "total" : 24
+  }
+}, {
+  "buildOrder" : 58,
+  "reportUrl" : "http://localhost:8888/job/python_pytest/58/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 24,
+    "unknown" : 0,
+    "total" : 24
+  }
+}, {
+  "buildOrder" : 57,
+  "reportUrl" : "http://localhost:8888/job/python_pytest/57/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 24,
+    "unknown" : 0,
+    "total" : 24
+  }
+}, {
+  "buildOrder" : 56,
+  "reportUrl" : "http://localhost:8888/job/python_pytest/56/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 24,
+    "unknown" : 0,
+    "total" : 24
+  }
+}, {
+  "buildOrder" : 55,
+  "reportUrl" : "http://localhost:8888/job/python_pytest/55/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 24,
+    "unknown" : 0,
+    "total" : 24
+  }
+}, {
+  "buildOrder" : 54,
+  "reportUrl" : "http://localhost:8888/job/python_pytest/54/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 24,
+    "unknown" : 0,
+    "total" : 24
+  }
+}, {
+  "buildOrder" : 53,
+  "reportUrl" : "http://localhost:8888/job/python_pytest/53/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 24,
+    "unknown" : 0,
+    "total" : 24
+  }
+}, {
+  "buildOrder" : 52,
+  "reportUrl" : "http://localhost:8888/job/python_pytest/52/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 24,
+    "unknown" : 0,
+    "total" : 24
+  }
+}, {
+  "buildOrder" : 51,
+  "reportUrl" : "http://localhost:8888/job/python_pytest/51/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 24,
+    "unknown" : 0,
+    "total" : 24
+  }
+}, {
+  "buildOrder" : 50,
+  "reportUrl" : "http://localhost:8888/job/python_pytest/50/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 24,
+    "unknown" : 0,
+    "total" : 24
+  }
+}, {
+  "buildOrder" : 49,
+  "reportUrl" : "http://localhost:8888/job/python_pytest/49/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 24,
+    "unknown" : 0,
+    "total" : 24
+  }
+}, {
+  "buildOrder" : 48,
+  "reportUrl" : "http://localhost:8888/job/python_pytest/48/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 24,
+    "unknown" : 0,
+    "total" : 24
+  }
+}, {
+  "buildOrder" : 47,
+  "reportUrl" : "http://localhost:8888/job/python_pytest/47/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 24,
+    "unknown" : 0,
+    "total" : 24
+  }
+}, {
+  "buildOrder" : 46,
+  "reportUrl" : "http://localhost:8888/job/python_pytest/46/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 24,
+    "unknown" : 0,
+    "total" : 24
+  }
+}, {
+  "buildOrder" : 45,
+  "reportUrl" : "http://localhost:8888/job/python_pytest/45/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 24,
+    "unknown" : 0,
+    "total" : 24
+  }
+} ]
