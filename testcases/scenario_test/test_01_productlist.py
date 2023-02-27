@@ -9,12 +9,12 @@ from operation.user_operation import user_order_delivery, assert_validate, get_e
 
 def setup_module():
     global excel, sheet
-    excel = openpyxl.load_workbook('D:\\pytest_excel_1\\data\\vshare_scenario.xlsx')
+    excel = openpyxl.load_workbook(r'D:\pytest_excel_1\data\vshare_scenario.xlsx')
     sheet = excel['info']
 
 class TestProductlist:
 
-    @pytest.mark.parametrize('data',re.read_excel('D:\\pytest_excel_1\\data\\vshare_scenario.xlsx'))
+    @pytest.mark.parametrize('data',re.read_excel(r'D:\pytest_excel_1\data\vshare_scenario.xlsx'))
     def test_productlist(self,data):
         r = data[0] + 1
         rd.report_api(data[11],data[17],data[16],data[18],data[19])

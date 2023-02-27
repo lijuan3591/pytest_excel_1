@@ -13,14 +13,14 @@ from operation.user_operation import assert_validate, get_extract_data, user_ord
 
 def setup_module():
     global excel, sheet
-    excel = openpyxl.load_workbook('D:\\pytest_excel_1\\data\\vshare.xlsx')
+    excel = openpyxl.load_workbook(r'D:\pytest_excel_1\data\vshare.xlsx')
     sheet = excel['info']
 
 
 class TestUserOrderDelivery():
 
     @pytest.mark.smoke
-    @pytest.mark.parametrize('data', re.read_excel('D:\\pytest_excel_1\\data\\vshare.xlsx'))
+    @pytest.mark.parametrize('data', re.read_excel(r'D:\pytest_excel_1\data\vshare.xlsx'))
     def test_user_order_delivery(self,data):
         r = data[0] + 1
         rd.report_api(data[11],data[17],data[16],data[18],data[19])
