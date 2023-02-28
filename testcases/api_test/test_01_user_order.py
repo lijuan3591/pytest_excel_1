@@ -28,7 +28,7 @@ class TestUserOrderDelivery():
         res = user_order_delivery(data[3],data[1],data[2],data[5],data[4],data[7],data[6],data[15])
         assert_validate(excel,sheet,r,res,data[8],data[9],PATH)
         get_extract_data(data[12], data[13], res, data[14])
-        check_user_order(sheet,excel,EXCEL_PATH,r,data[20],data[21])
+        check_user_order(sheet,excel,PATH,r,data[20],data[21])
 
 
 
