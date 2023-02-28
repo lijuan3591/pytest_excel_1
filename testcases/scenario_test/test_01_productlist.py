@@ -1,3 +1,5 @@
+import os
+
 import openpyxl
 import pytest
 
@@ -6,8 +8,9 @@ from common.read_data import rd
 from common.read_excel import re
 from operation.user_operation import user_order_delivery, assert_validate, get_extract_data
 
-PATH=r'D:\pytest_excel_1\data\vshare_scenario.xlsx'
-
+# PATH=r'D:\pytest_excel_1\data\vshare_scenario.xlsx'
+BASE_PATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+PATH = os.path.join(BASE_PATH, "data", "vshare.xlsx")
 def setup_module():
     global excel, sheet
     excel = openpyxl.load_workbook(PATH)

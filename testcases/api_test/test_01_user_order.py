@@ -8,8 +8,9 @@ from common.read_excel import re
 from common.public_untils import EXCEL_PATH
 from operation.user_operation import assert_validate, get_extract_data, user_order_delivery, check_user_order
 
-
-PATH=r'D:\pytest_excel_1\data\vshare.xlsx'
+BASE_PATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+PATH = os.path.join(BASE_PATH, "data", "vshare.xlsx")
+# PATH=r'D:\pytest_excel_1\data\vshare.xlsx'
 
 def setup_module():
     global excel, sheet
